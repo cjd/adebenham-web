@@ -1,0 +1,378 @@
+ImagePath $[HOME]/.fvwm/images
+
+# Ignore Numlock
+IgnoreModifiers L25
+
+EdgeResistance 10000 20
+EdgeScroll 0 0
+EdgeThickness 1
+
+ClickTime 750
+SnapAttraction 8 SameType
+
+DeskTopSize 1x1
+
+# Setup Colorsets
+CleanupColorsets
+# BottomPanel
+Colorset 0 fg white, bg grey,fgsh #444444,sh #000066,hi blue
+# Menu
+Colorset 1 fg white , bg grey,fgsh black,sh #666666,hi #bbbbff, Transparent buffer, tint #bbbbff 50
+#Colorset 1 fg white , bg grey,fgsh black,sh #666666,hi #bbbbff, Translucent #bbbbff 50
+# Active menuitem
+Colorset 2 fg yellow, bg grey,fgsh #444444,sh #666666,hi #bbbbff, Transparent buffer, tint #bbbbff 50
+#Colorset 2 fg yellow, bg grey,fgsh #444444,sh #666666,hi #bbbbff, Translucent #bbbbff 50
+# PanelBar, Icontitle
+Colorset 3 RootTransparent,fg white ,fgsh black, bg grey,fgsh #444444,sh #000066 ,hi blue
+# Title bar + buttons - inactive
+Colorset 4 NoShape, RootTransparent Buffer, Tint #f6f6f6 20,bg #909090
+# Title bar - active
+Colorset 5 NoShape, RootTransparent Buffer, Tint #bbbbff 50,bg #909090
+
+# Menu styles
+MenuStyle * HilightBackOff, ActiveFore, MenuColorset 1, ActiveColorset 2
+MenuStyle * Hilight3DThickness -2, BorderWidth 2
+MenuStyle * Animation
+MenuStyle * Font "Shadow=1 1 SE:xft:ZeroHour:Roman:size=16"
+MenuStyle * PopupDelayed, PopupDelay 100, PopdownDelayed, PopdownDelay 100
+MenuStyle * PopupOffset -3 100, TitleWarpOff
+MenuStyle * TitleUnderlines2, SeparatorsLong, TrianglesRelief
+MenuStyle * AutomaticHotkeysOff, DoubleClickTime
+MenuStyle * PopupAsSubmenu, HoldSubmenus, SubmenusRight
+MenuStyle * ItemFormat "%|%i%l%>%|"
+BusyCursor DynamicMenu True
+
+OpaqueMoveSize unlimited
+
+# Mark off the top panel area
+EwmhBaseStruts 0 0 32 0
+#EWMHPlacementUseWorkingArea
+
+# default Styles
+Style *		Font "Shadow=1 1 SE:xft:Seized Future A:Roman:size=16"
+Style *		IconFont xft:Arial:Bold:Roman:size=14
+Style *		ForeColor    #a0a0a0, BackColor    #909090
+Style *		HilightFore  #e0e0e0, HilightBack  #808080
+Style *		BorderWidth 2, HandleWidth 2
+Style *		FvwmBorder
+Style *		DecorateTransient
+Style *		NoIconPosition EWMHPlacementUseWorkingArea
+Style *		IconBox 1000x70-1-1, NoIconOverride, IconFill right bottom, IconGrid 40 40
+Style *		IconTitle, IconTitleColorset 3, HilightIconTitleColorset 3, IconTitleRelief 0, IconFont "Shadow=1 1 SE:xft:Arial:size=12"
+Style *		SloppyFocus
+Style *		GrabFocusOff
+Style *		MinOverlapPlacement
+Style *		Button 1, Button 3, Button 2, Button 4, Button 6
+Style *		FvwmButtons
+Style *		WindowShadeShrinks, WindowShadeSteps 100
+Style *		TitleAtLeft, MiniIcon title_bar/mini.x.png
+
+# Sticky stuff
+Style "gDesklets"	Sticky,NoTitle,NeverFocus, BorderWidth 0, HandleWidth 0
+Style "gkrellm"		Sticky,NoTitle,NeverFocus, BorderWidth 0, HandleWidth 0
+Style "Configuration"	Title, SloppyFocus
+
+# Default style for untitled windows
+Style "Untitled"	WindowListSkip,CirculateSkip
+
+# Styles for various Fvwm modules:
+Style "Fvwm*"       NoTitle,  Sticky, WindowListSkip
+Style "Fvwm*"       BorderWidth 0, CirculateSkipIcon, CirculateSkip
+Style "FvwmButtons" NeverFocus, StaysOnTop, BorderWidth 0,HandleWidth 0
+Style "PanelBar"    NeverFocus, StaysPut, BorderWidth 0,HandleWidth 0
+Style "ClockBar"    NeverFocus, StaysPut
+
+# Special Styles
+Style "Gaim"        StartsOnPage 0 ,SkipMapping
+Style "Firefox-bin"        StartsOnPage 1,SkipMapping
+Style "Liferea-bin"        StartsOnPage 2,SkipMapping
+Style "Mozilla-thunderbird-bin"        StartsOnPage 3,SkipMapping
+Style "Blender"	StartsOnPage 3,SkipMapping
+Style "xmms"	NoTitle, Sticky
+Style "bmp"	NoTitle, Sticky
+Style "gimp"	TitleAtTop
+Style "gimp-2.1"	TitleAtTop
+Style "oclock"	NoTitle, Sticky
+
+CursorStyle TITLE left_ptr
+CursorStyle DEFAULT left_ptr
+CursorStyle MENU left_ptr
+CursorStyle ROOT left_ptr
+
+Key Escape      A   M   SendToModule    FvwmProxy   ShowToggle
+Key Tab		A	M	Next (AcceptsFocus CurrentDesk) WarpToWindow
+Key Tab		A	SM	Prev (AcceptsFocus CurrentDesk) WarpToWindow
+Key Up		A	CM	ScanForWindow North West Focus
+Key Down	A	CM	ScanForWindow South West Focus
+Key Left	A	CM	ScanForWindow West North Focus
+Key Right	A	CM	ScanForWindow East North Focus
+
+
+Key F1		A	M	GotoDesk 0 0 0 0
+Key F2		A	M	GotoDesk 1 1 1 1
+Key F3		A	M	GotoDesk 2 2 2 2
+Key F4		A	M	GotoDesk 3 3 3 3
+
+Key F1		A	C	Exec 3ddesk
+
+Key F5		A	N	Exec mp3c prev
+Key F6		A	N	Exec mp3c play
+Key F7		A	N	Exec mp3c pause
+Key F8		A	N	Exec mp3c next
+Key F9		A	N	Exec mp3c stop
+
+Key x		A	CM	Exec xvt
+Key x		A	SCM	Exec xterm
+Key z		A	CM	Exec /usr/local/bin/xlock
+Key a		A	CM	Exec xpad -n
+Key c		A	CM	Exec pkill xcompmgr
+Key c		A	SCM	Exec xorg xcompmgr -c -f
+Mouse	1		R	N   Menu RootMenu Nop   
+Mouse	2		R	N   WindowList Nop
+Mouse	3		R	N   WindowList Nop
+
+#   for other parts of the window/borders/icons:
+Mouse 1	FS	A	Resize-or-Raise
+Mouse 1	T	A	Move-or-Raise
+Mouse 1	I	A	Move-or-Iconify
+Mouse 2	I	A	Move-or-Iconify
+Mouse 2	FST	A	Menu Window-Ops Nop
+Mouse 3	TSIF	A	RaiseLower
+Mouse 1 W	M	Move-or-Raise
+Mouse 1 W	4	Move-or-Raise
+
+
+#     button    context modifie function
+Mouse 0 	2	A	Menu Window-Ops Nop
+Mouse 0 	6	A	Close
+Mouse 0 	8	A	Thumbnail
+Mouse 1 	4	A	Maximize
+Mouse 2 	4	A	Maximize    0 grow
+Mouse 3 	4	A	Maximize grow    0
+
+BorderStyle -- HiddenHandles NoInset
+TitleStyle LeftJustified Height 24
+TitleStyle InActive ( Colorset 4 -- Flat ) \
+           Active ( Colorset 5 -- Flat )
+
+ButtonStyle All InActive ( Colorset 4 -- Flat )
+ButtonStyle All Active ( Colorset 5 -- Flat )
+
+# WindowMenu button
+ButtonStyle 2 - MwmDecorMenu Flat
+AddButtonStyle 2 MiniIcon
+
+# Min button
+ButtonStyle 8 - MwmDecorMin
+AddButtonStyle 8 Active Pixmap title_bar/min.png
+AddButtonStyle 8 Inactive Pixmap title_bar/min_inactive.png
+#AddButtonStyle 6 16 10x5@1 90x5@1 90x20@1 40x20@1 40x26@1 60x26@1 60x60@1 \
+#		80x60@1 50x90@1 20x60@1 40x60@1 40x26@1 60x26@1 60x20@1 \
+#		10x20@1 10x5@1 -- Flat
+
+# Max button
+ButtonStyle 4 - MwmDecorMax
+AddButtonStyle 4 Active Pixmap title_bar/max.png
+AddButtonStyle 4 Inactive Pixmap title_bar/max_inactive.png
+#AddButtonStyle 4 15 10x5@1 90x5@1 90x20@1 50x20@1 50x25@1 80x55@1 60x55@1 \
+#		60x90@1 40x90@1 40x55@1 20x55@1 50x25@1 50x20@1 10x20@1 \
+#		10x5@1 -- Flat
+
+# Close button
+ButtonStyle 6 - Flat
+AddButtonStyle 6 Active Pixmap title_bar/close.png
+AddButtonStyle 6 Inactive Pixmap title_bar/close_inactive.png
+#AddButtonStyle 4 15 10x5@1 90x5@1 90x20@1 50x20@1 50x25@1 80x55@1 60x55@1 \
+#AddButtonStyle 8 16 20x20@1 30x20@1 50x40@1 70x20@1 80x20@1 80x30@1 60x50@1 \
+#		80x80@1 70x80@1 50x60@1 30x80@1 20x80@1 20x70@1 40x50@1 \
+#		20x30@1 20x20@1
+
+
+######################## Initialization Functions ############################
+DestroyFunc StartFunction
+AddToFunc StartFunction
++ I Module FvwmButtons KeyButtons
++ I Module FvwmButtons PanelBar
++ I Module FvwmButtons ClockBar
++ I Module FvwmCommandS
++ I Module FvwmAnimate
++ I Module FvwmProxy
++ I Module FvwmAuto FvwmAutohide -menter enter_handler
++ I Test (Restart) All (Iconic) Test (f $[HOME]/.fvwm/icon.tmp.$[w.id].png) WindowStyle IconOverride, Icon $[HOME]/.fvwm/icon.tmp.$[w.id].png
+
+AddToFunc InitFunction
+ + I autohide KeyButtons 500 S
+
+AddToFunc ExitFunction
++ I Test (!ToRestart) Exec exec rm -f $[HOME]/.fvwm/icon.tmp.*
++ I Exec exec sync
+
+######################## Menus ###################
+AddToMenu RootMenu	"Root Menu"	Title
++			%menu/terminal.png%"Terminal"	Exec exec xvt
++			%menu/stock_home.png%"Home"		Exec exec nautilus --no-desktop /home/cjd
++			%menu/gnome-dev-removable.png%"Mount USB"	Exec exec /usr/local/bin/mntusb
++			%menu/gnome-dev-removable.png%"Unmount USB"	Exec exec /usr/local/bin/umntusb
++         		%menu/gear.png%"Suspend"      Exec exec /usr/local/bin/susleep
++         		%menu/gear.png%"LaptopMode On"      Exec exec sudo /sbin/laptop_mode start
++         		%menu/gear.png%"LaptopMode Off"      Exec exec sudo /sbin/laptop_mode stop
++			%menu/kappfinder.png%"Identify"	Module	FvwmIdent
+
++			""		Nop
++         		%menu/gear.png%"Restart Fvwm"      Restart
++			%menu/exit.png%"Exit Fvwm"  Quit
+
+#Read /etc/X11/fvwm/menudefs.hook quiet
+Read /etc/X11/fvwm/DebianMenu quiet
+DestroyMenu MainMenu
+AddToMenu MainMenu	%menu/applications_section.png%"&Apps"	Popup "/Debian/Apps"
++			%menu/amusement_section.png%"&Games" Popup "/Debian/Games"
++			%menu/terminal.png%"Terminal"	Exec exec xvt
++			%menu/mozilla-firefox.png%"Mozilla"	Exec exec x-www-browser
++			%menu/gaim.png%"Gaim"	Exec exec gaim
++			%menu/gmpc.png%"Gmpc"	Exec exec gmpc
++			%menu/soffice.png%"StarOffice"	Exec exec soffice
++			""		Nop
++         		%menu/gear.png%"Restart Fvwm"      Restart
++			%menu/exit.png%"Exit Fvwm"  Quit
+
+AddToMenu Window-Ops	"&Move"		Move
++			"&Resize"	Resize
++			"R&aise"	Raise
++			"&Lower"	Lower
++			"(Un)&Stick"	Stick
++			""		Nop
++			"&Delete"	Delete
++			"&Close"	Close
++			"Destroy"	Destroy
++			""		Nop
++			"MoveTo 1"	MoveToDesk 0 0 0 0
++			"MoveTo 2"	MoveToDesk 1 1 1 1
++			"MoveTo 3"	MoveToDesk 2 2 2 2
++			"MoveTo 4"	MoveToDesk 3 3 3 3
+
+AddToFunc Move-or-Raise		I Raise
++				M Move
++  				D WindowShade
+
+AddToFunc Move-or-Iconify	I Raise
++				M Move
++				D DeThumbnail
+
+AddToFunc Resize-or-Raise	I Raise
++				M Resize
++				D Lower
+
+AddToFunc Iconify-and-Raise     I DeThumbnail
++                               I Raise
+
+# Animations are controlled by this module
+# You could also use Frame, Lines, Flip, Turn, Twist, Random and None.
+DestroyModuleConfig FvwmAnimate: *
+*FvwmAnimate: Effect Zoom3D
+*FvwmAnimate: Width 3
+
+# The autohiding functions
+AddToFunc autohide
++ I ThisWindow ($0) Deschedule $[w.id]
++ I ThisWindow ($0) ThisWindow (shaded) WindowShade off
++ I TestRc (!Match) All ($0, !shaded) autohide_hide $1 $2
+
+AddToFunc autohide_hide
++ I Schedule $0 $[w.id] WindowShade $1
++ I Schedule $0 $[w.id] Deschedule $[w.id]
+
+# Add the windows you want to autohide
+AddToFunc enter_handler
++ I autohide KeyButtons 500 S
+
+# Nifty thumbnails for icons
+DestroyFunc Thumbnail
+AddToFunc Thumbnail
++ I Raise
++ I Piperead "xwd -silent -id $[w.id] > $[HOME]/.fvwm/icon.tmp.$[w.id].xwd"
++ I Iconify
++ I Exec nice -19 convert -resize 64x54 -frame 1x1 -mattecolor black -quality 0 xwd:$[HOME]/.fvwm/icon.tmp.$[w.id].xwd png:$[HOME]/.fvwm/icon.tmp.$[w.id].png; FvwmCommand 'WindowId $[w.id] WindowStyle IconOverride, Icon $[HOME]/.fvwm/icon.tmp.$[w.id].png, StaysOnBottom'
+ 
+DestroyFunc DeThumbnail
+AddToFunc DeThumbnail
++ I DestroyWindowStyle
++ I Exec rm -f $HOME/.fvwm/icon.tmp.$[w.id].*
++ I Iconify
+
+########################## Window-Identifier ###############################
+# Just choose colors and a fonts
+*FvwmIdentBack MidnightBlue
+*FvwmIdentFore Yellow
+*FvwmIdentFont xft:Arial:Regular:Roman:size=12
+
+########################### Pager #########################################
+*FvwmPager: Colorset            * 3
+*FvwmPager: SloppyFocus
+*FvwmPager: MiniIcons
+*FvwmPager: UseSkipList
+*FvwmPager: Hilight             #ccccff
+*FvwmPager: WindowColors        #cccccc #777799 #ffffff #9999cc
+*FvwmPager: Font                none
+*FvwmPager: SmallFont           xft:Arial:Regular:Roman:size=6
+*FvwmPager: Balloons            All
+*FvwmPager: BalloonBack         Yellow
+*FvwmPager: BalloonFore         Black
+*FvwmPager: BalloonFont         xft:Arial:Regular:Roman:size=12
+*FvwmPager: BalloonYOffset      +2
+*FvwmPager: BalloonBorderWidth  1
+*FvwmPager: BalloonBorderColor  Black
+
+########################### Top Panel #####################################
+*PanelBar: BoxSize smart
+*PanelBar: Columns 25
+*PanelBar: Rows 1
+*PanelBar: Frame 0
+*PanelBar: Colorset 3
+*PanelBar: ActiveColorset 3
+*PanelBar: PressColorset 3
+*PanelBar: Font "Shadow=1 SE:xft:ZeroHour:bold:pixelsize=16:minspace=true"
+*PanelBar: Geometry +0+0
+*PanelBar: Padding 0 0
+*PanelBar: Pixmap none
+*PanelBar: (3x1 icon panel/normal/menu.png, ActiveIcon panel/hover/menu.png, Action Menu MainMenu Root 0 32p Nop)
+*PanelBar: (1x1 icon panel/normal/gnome-terminal.png, ActiveIcon panel/hover/gnome-terminal.png, Action Exec xvt)
+*PanelBar: (1x1 icon panel/normal/firefox.png, ActiveIcon panel/hover/firefox.png, Action Exec xwwwbrowser)
+*PanelBar: (1x1 icon panel/normal/thunderbird.png, ActiveIcon panel/hover/thunderbird.png, Action Exec mozilla-thunderbird)
+*PanelBar: (1x1 icon panel/normal/liferea.png, ActiveIcon panel/hover/liferea.png, Action Exec liferea)
+*PanelBar: (1x1 icon panel/normal/gnome-word.png, ActiveIcon panel/hover/gnome-word.png, Action Exec jarnal)
+*PanelBar: (1x1 icon panel/normal/lyricue-icon.png, ActiveIcon panel/hover/lyricue-icon.png, Action Exec lds)
+*PanelBar: (1x1 icon panel/normal/landscape.png, ActiveIcon panel/hover/landscape.png, Action Exec rotoff)
+*PanelBar: (1x1 icon panel/normal/portrait.png, ActiveIcon panel/hover/portrait.png, Action Exec roton)
+*PanelBar: (1x1 icon panel/normal/gs2-48x48.png, ActiveIcon panel/hover/gs2-48x48.png, Action Exec gnomesword2)
+*PanelBar: (1x1 icon panel/normal/gnome-networktool.png, ActiveIcon panel/hover/gnome-networktool.png, Action Exec sudo apradar -i eth0 -d "/sbin/pump -i")
+*PanelBar: (1x1 icon panel/normal/gnome-lockscreen.png, ActiveIcon panel/hover/gnome-lockscreen.png, Action Exec xlock)
+*PanelBar: (1x1 icon panel/normal/stock_dialog-warning.png, ActiveIcon panel/hover/stock_dialog-warning.png, Action Exec xkill)
+*PanelBar: (4x1 Swallow "FvwmPager" "FvwmPager 0 3")
+*PanelBar: (2x1 Swallow "ProcMeter V3.4c" "Exec exec procmeter3 -geometry 64x32")
+*PanelBar: (2x1 Swallow "XCal" "Exec exec xcal")
+*PanelBar: (1x1 Swallow xstroke "Exec exec xstroke -b 1")
+*PanelBar: (2x1 Swallow (Kill) "FvwmApplet-ACPI" "FvwmScript FvwmApplet-ACPI") 
+
+########################### Top Clock #####################################
+*ClockBar: BoxSize smart
+*ClockBar: Columns 1
+*ClockBar: Rows 1
+*ClockBar: Frame 0
+*ClockBar: Colorset 3
+*ClockBar: Font "Shadow=1 SE:xft:ZeroHour:bold:pixelsize=16:minspace=true"
+*ClockBar: Geometry 64x32-0+0
+*ClockBar: Padding 0 0
+*ClockBar: Pixmap none
+*ClockBar: (Swallow (Kill) "FvwmApplet-DigitalClock" "FvwmScript FvwmApplet-DigitalClock") 
+
+################## Pop-out keyboard #######################################
+*KeyButtons: BoxSize fixed
+*KeyButtons: Rows 1
+*KeyButtons: Columns 4
+*KeyButtons: Geometry 1050x200+0-0@g
+*KeyButtons: Frame 0
+*KeyButtons: Colorset 0
+*KeyButtons: Padding 1 1
+*KeyButtons: (3x1 Swallow(UseOld,NoKill) "xvkbd - Virtual Keyboard" "Exec xvkbd -g 850x200 -no-keypad &")
+
