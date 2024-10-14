@@ -4,9 +4,10 @@ date: "2010-02-04T01:18:56+00:00"
 title: Reqtool
 url: /old-stuff/reqtool/
 summary: Reqtool is a pure perl application that both handles email requests and provides a web interface to track, edit and resolve these email requests. It requires no external DB or additional apps other than a web server.
-thumbnail: /files/reqtool/small.jpg
+thumbnail: /files/reqtool/large.jpg
 
 ---
+
 [![Screenshot of reqtool](/files/reqtool/small.jpg)](/files/reqtool/large.jpg)**Current Version: _0.14_**
 Reqtool is a pure perl application that both handles email requests and provides a web interface to track, edit and resolve these email requests. It requires no external DB or additional apps other than a web server.
 
