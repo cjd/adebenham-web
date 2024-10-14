@@ -1,0 +1,19 @@
+<html>
+<head><title>Debenham Family Tree</title></head>
+<body>
+<h1>Debenham Family Tree</h1>
+<p>
+    <canvas id="zoomCanvas" width="800" height="400">You need a browser with the HTML5 Canvas ability.</canvas><br/>
+
+    <input type="button" value="Zoom in" onclick="tree.zoomInCentre()"/>
+    <input type="button" value="Zoom out" onclick="tree.zoomOutCentre()"/>
+</p>
+</body>
+<foot>
+    <script type="text/javascript" src="imageloader.js"></script>
+    <script type="text/javascript" src="canvaszoom.js"></script>
+    <script type="text/javascript">
+        var tree = new CanvasZoom( document.getElementById('zoomCanvas'), "family_tree_files/", 24158, 4533 );
+    </script>
+</foot>
+</html>
