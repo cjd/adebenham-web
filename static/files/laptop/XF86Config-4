@@ -1,0 +1,125 @@
+Section "Files"
+	FontPath	"/var/lib/defoma/x-ttcidfont-conf.d/dirs/CID"
+	FontPath	"/var/lib/defoma/x-ttcidfont-conf.d/dirs/TrueType"           
+	FontPath	"/usr/lib/X11/fonts/misc"
+	FontPath	"/usr/lib/X11/fonts/100dpi/:unscaled"
+	FontPath	"/usr/lib/X11/fonts/75dpi/:unscaled"
+	FontPath	"/usr/share/fonts/truetype"
+	FontPath	"/usr/share/fonts/type1"
+	FontPath	"/usr/lib/X11/fonts/TrueType"
+	FontPath	"/usr/lib/X11/fonts/Type1"
+	FontPath	"/usr/lib/X11/fonts/Speedo"
+	FontPath	"/usr/lib/X11/fonts/100dpi"
+	FontPath	"/usr/lib/X11/fonts/75dpi"
+EndSection
+
+Section "Module"
+	Load	"bitmap"
+	Load	"dbe"
+	Load	"ddc"
+	Load	"extmod"
+	Load	"freetype"
+	Load	"glx"
+	Load	"record"
+	Load	"speedo"
+	Load	"type1"
+	Load	"vbe"
+	Load	"int10"
+#	Load	"dri"
+#	Load	"pex5"
+#	Load	"xie"
+#	Load	"GLcore"
+EndSection
+
+Section "InputDevice"
+	Identifier	"Generic Keyboard"
+	Driver		"keyboard"
+	Option		"CoreKeyboard"
+	Option		"XkbRules"	"xfree86"
+	Option		"XkbModel"	"pc104"
+	Option		"XkbLayout"	"us"
+	Option		"XkbDisable"	"true"
+EndSection
+
+Section "InputDevice"
+	Identifier	"Configured Mouse"
+	Driver		"mouse"
+	Option		"CorePointer"
+	Option		"Device"		"/dev/misc/psaux"
+	Option		"Protocol"		"ImPS/2"
+	Option		"Emulate3Buttons"	"true"
+	Option		"ZAxisMapping"		"4 5"
+EndSection
+
+Section "InputDevice"
+	Identifier	"Serial Mouse"
+	Driver		"mouse"
+	Option		"Device"		"/dev/tts/0"
+	Option		"Protocol"		"Microsoft"
+	Option		"Emulate3Buttons"	"true"
+	Option		"SendCoreEvents"	"true"
+EndSection
+
+Section "InputDevice"
+	Identifier	"USB Mouse"
+	Driver		"mouse"
+	Option		"Device"		"/dev/input/mice"
+	Option		"Protocol"		"imps/2"
+	Option		"SendCoreEvents"	"true"
+	Option		"ZAxisMapping"		"4 5"
+EndSection
+
+
+Section "Device"
+	Identifier	"Generic Video Card"
+	Driver		"nvidia"
+	Option		"NoLogo"	"true"
+	Option		"NvAgp"		"3"
+	Option		"CursorShadow"	"true"
+	#Option		"ConnectedMonitor"	"TV,DFP"
+	Option		"ConnectedMonitor"	"CRT,DFP"
+	Option		"IgnoreEDID"	"true"
+	Option		"TVStandard"	"PAL-B"
+	Option		"TwinView"
+	Option		"TwinViewOrientation" "Clone"
+	Option		"SecondMonitorHorizSync" "28-50"
+	Option		"SecondMonitorVertRefresh" "43-75"
+	Option		"MetaModes" "1024x768,1024x768;NULL,1024x768"
+EndSection
+
+Section "Monitor"
+	Identifier	"Generic Monitor"
+	HorizSync	28-50
+	VertRefresh	43-75
+	#VertRefresh	60
+	Option		"DPMS" "off"
+EndSection
+
+Section "Screen"
+	Identifier	"Default Screen"
+	Device		"Generic Video Card"
+	Monitor		"Generic Monitor"
+	DefaultDepth	24
+	SubSection "Display"
+		Depth		16
+		Modes		"1024x768"
+	EndSubSection
+	SubSection "Display"
+		Depth		24
+		Modes		"1024x768"
+	EndSubSection
+EndSection
+
+Section "ServerLayout"
+	Identifier	"Default Layout"
+	Screen		"Default Screen"
+	InputDevice	"Generic Keyboard"
+	InputDevice	"Configured Mouse"
+	InputDevice	"Serial Mouse"
+	InputDevice	"USB Mouse"
+EndSection
+
+Section "DRI"
+	Mode	0666
+EndSection
+
