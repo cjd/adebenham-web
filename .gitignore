@@ -1,0 +1,6 @@
+static/debian
+static/debian-archive
+static/lights/xLights-2016
+static/lights
+static/lists
+.hugo_build.lock
