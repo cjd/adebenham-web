@@ -1,0 +1,1 @@
+xterm -rv -title mp3lcd -geometry 10x1-0+0 -e /home/debenham/bin/mp3_client.pl &
