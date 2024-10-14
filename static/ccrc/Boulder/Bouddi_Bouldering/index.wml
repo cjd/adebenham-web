@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id="init" title="Bouddi Bouldering">
+<p><a href="#desc">Description</a><br/>
+<a href="#location">Location</a><br/>
+<a href="#runs">Runs</a>
+</p>
+</card>
+<card id='desc' title='Description'>
+<p>Scattered bouldering at and around the crags in bouddi national park</p>
+</card>
+<card id='location' title='Location'>
+<p>Head out the Wagstaffe then turn somewhere, exact location is unknown at the moment, but if you discover then please email us.</p>
+</card>
+<card id='runs' title='Runs'>
+<p>No Runs</p>
+</card>
+</wml>

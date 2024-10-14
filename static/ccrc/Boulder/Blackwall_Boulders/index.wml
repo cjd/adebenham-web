@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id="init" title="Blackwall Boulders">
+<p><a href="#desc">Description</a><br/>
+<a href="#location">Location</a><br/>
+<a href="#runs">Runs</a>
+</p>
+</card>
+<card id='desc' title='Description'>
+<p>Many boulder problems located at the base of the Blackwall climbs and further to the left</p>
+</card>
+<card id='location' title='Location'>
+<p>From the rip bridge heading towards Woy Woy turn left onto Picnic pde, then turn left onto Flathead road, then turn left onto booker bay road, follow under bridge then turn left onto Mullbong road, drive to end.<br/>Do not take the fire trail, use the foot track to the left of the fire trail follow up hill about 250m then as you guessed take left fork in track up steep rock steps follow track through rocks, when you are there you will know it.</p>
+</card>
+<card id='runs' title='Runs'>
+<p>No Runs</p>
+</card>
+</wml>

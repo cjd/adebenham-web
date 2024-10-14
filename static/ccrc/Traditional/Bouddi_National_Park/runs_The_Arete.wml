@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id='init' title='The Arete'>
+<p>
+<b>Start: </b>Left of descent gully<br/>
+The blunt arete just to the left of the descent gully. Scramble up to the waist high ledge then up on small, sharp crimps to the large, sloping break. Doddle up the top section on jugs.<br/>
+Grade=20 <br/>
+</p>
+</card>
+</wml>

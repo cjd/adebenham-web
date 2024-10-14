@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id="init" title="Phegans Bay">
+<p><a href="#desc">Description</a><br/>
+<a href="#location">Location</a><br/>
+<a href="#runs">Runs</a>
+</p>
+</card>
+<card id='desc' title='Description'>
+<p>There is a range of climbs starting from around grade 14. Most are bolted, however some anchor points have been bashed in on main face (see further on for more information about this)</p>
+</card>
+<card id='location' title='Location'>
+<p>From the freeway take the Gosford exit, turn onto Woy Woy road at the second lights in Kariong.<br/>Follow Woy Woy road past the fixed speed camera, turn at Woy Woy Bay rd then first right down Olive av. Go straight through the crossroad to end of Olive av follow the track track round to the rocks.</p>
+</card>
+<card id='runs' title='Runs'>
+<p>No Runs</p>
+</card>
+</wml>

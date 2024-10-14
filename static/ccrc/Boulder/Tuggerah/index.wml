@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id="init" title="Tuggerah">
+<p><a href="#desc">Description</a><br/>
+<a href="#location">Location</a><br/>
+<a href="#runs">Runs</a>
+</p>
+</card>
+<card id='desc' title='Description'>
+<p>Lots of scattered boulders, few with possibilities but some up to 4-5 meters high.</p>
+</card>
+<card id='location' title='Location'>
+<p>Head along the freeway and turn off at the Tuggerah exit heading towards Westfield.<br/>Take the first left and park at the grass on the left of the first corner.<br/>There is a track off to the west take that, don't look at the small boulders on the slope about 4 - 500 meters later there is a larger boulder might have a climb or 2 continue west the next ones are covered in graffiti and there are some chalk marks</p>
+</card>
+<card id='runs' title='Runs'>
+<p>No Runs</p>
+</card>
+</wml>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id='init' title='Bombie'>
+<p>
+<b>Start: </b>5m left of the blunt arete<br/>
+Scramble onto the waist high ledge, then up, using the well-worn dish, the vertical intrusion on the left and some slopers on the shield formation. Pretty awful top-out, but a good belay using cams on a block about 5m back.<br/>
+Grade=22 *<br/>
+</p>
+</card>
+</wml>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?><!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml"> 
+<wml> 
+<card id="logo" title="CCRC logos">
+<p>
+Put the ccrc logo on your Ericsson Phone<br/>
+<img src="images/gray2.gif" alt="ccrclogo2"/>
+<br/>
+CCRC logo - Grayscale<br/>
+<img src="images/grayccrc.gif" alt="ccrclogo"/>
+<br/>
+CCRC logo - black and White <br/>
+</p>
+</card>
+</wml>

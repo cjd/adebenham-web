@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id='init' title='Rumbalara Rumble'>
+<p>
+<b>Start: </b>the far left<br/>
+Starts on the far left with unknown 3 then links it via unknown 1 to Swing Low or Sweet Chariot, finishing around the far right end. Long full traverse of cave, possible but bloody hard (for me anyway)<br/>
+Grade=V4 *<br/>
+</p>
+</card>
+</wml>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id="init" title="Jolls Bridge">
+<p><a href="#desc">Description</a><br/>
+<a href="#location">Location</a><br/>
+<a href="#runs">Runs</a>
+</p>
+</card>
+<card id='desc' title='Description'>
+<p>A long section of cliffs sitting right beside the freeway.  Varied grades of climbs with heights of up to 45m. Most climbs require mixed gear with some sport routes.</p>
+</card>
+<card id='location' title='Location'>
+<p>Travelling south on the freeway you hit the end of the 90kph zone.<br/>Turn off at the Brooklyn exit head north up the old pacific highway. A little way along you pass just below Jolls bridge. There is decent parking a bit further on.<br/>Walk up the hill directly below the bridge, pass under then head up beside the road to the top of the cliff.</p>
+</card>
+<card id='runs' title='Runs'>
+<p>No Runs</p>
+</card>
+</wml>

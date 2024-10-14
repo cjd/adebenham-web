@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id='init' title='unknown 2'>
+<p>
+<b>Start: </b>outside wall of cave<br/>
+On outside wall of cave to the left there is a bunch of single/double finger pockets that head up and tops out over flat,sloppy ledge There are at least two different paths here<br/>
+Grade=V3/4 <br/>
+</p>
+</card>
+</wml>

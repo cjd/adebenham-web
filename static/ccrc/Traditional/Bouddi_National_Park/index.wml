@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id="init" title="Bouddi National Park">
+<p><a href="#desc">Description</a><br/>
+<a href="#location">Location</a><br/>
+<a href="#runs">Runs</a>
+</p>
+</card>
+<card id='desc' title='Description'>
+<p>Bouddi National Park  is a small national park on the central coast of NSW. Although it's very small, it does have some quite large sea cliffs similar to those found in Sydney (Bouddi is part of the same region of sandstone). These are generally areas of active erosion, and are loose, unstable and unsuitable for climbing. There are also some inland cliffs which contain most of the climbing. Many of these are at the heads of gullies, and can be quite wet and slimy, particularly after rain.<br/></p>
+</card>
+<card id='location' title='Location'>
+<p>Head out to Wagstaffe then turn somewhere, exact location is unknown at the moment, but if you discover then please email us.</p>
+</card>
+<card id='runs' title='Runs'>
+<p><a href="/ccrc/wap.php?file=Traditional/Bouddi_National_Park/runs_Arena.wml#init">Arena</a><br/>
+<a href="/ccrc/wap.php?file=Traditional/Bouddi_National_Park/runs_The_Arete.wml#init">The Arete</a><br/>
+<a href="/ccrc/wap.php?file=Traditional/Bouddi_National_Park/runs_Bombie.wml#init">Bombie</a><br/>
+<a href="/ccrc/wap.php?file=Traditional/Bouddi_National_Park/runs_Moss_City.wml#init">Moss City</a><br/>
+<a href="/ccrc/wap.php?file=Traditional/Bouddi_National_Park/runs_15plus.wml#init">15plus</a><br/>
+<a href="/ccrc/wap.php?file=Traditional/Bouddi_National_Park/runs_15plus_Variant.wml#init">15plus Variant</a><br/>
+</p>
+</card>
+</wml>

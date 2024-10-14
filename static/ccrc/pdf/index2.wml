@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id="init" title="Central Coast Rockclimbing">
+ <p>
+ <a href="#Menu">Enter the Central Coast Rock Climbing Guide
+ </a>
+ </p>
+</card>
+<card id="Menu" title="CCRC Index">
+ <p>
+   <b>Choose Your Section</b><br/>
+   <a href="#Climb">
+    Climbs
+  </a><br/>
+  <a href="#Boulder">
+    Boulders
+  </a><br/>
+  <a href="#Indoor">
+    Indoor
+  </a>
+ </p>
+</card>
+<card id="Climb" title="Climbs">
+<p><b>Choose your location</b><br/>
+<a href="/ccrc/wap.php?file=Sport/Blackwall_Mountain/index.wml#init">
+Blackwall Mountain
+</a><br/>
+<a href="/ccrc/wap.php?file=Sport/Patonga/index.wml#init">
+Patonga
+</a><br/>
+<a href="/ccrc/wap.php?file=Sport/Phegans_Bay/index.wml#init">
+Phegans Bay
+</a><br/>
+<a href="/ccrc/wap.php?file=Sport/Reeves_Street/index.wml#init">
+Reeves Street
+</a><br/>
+<a href="/ccrc/wap.php?file=Sport/Wards_Hill/index.wml#init">
+Wards Hill
+</a><br/>
+<a href="/ccrc/wap.php?file=Sport/West_Gosford/index.wml#init">
+West Gosford
+</a><br/>
+<a href="/ccrc/wap.php?file=Traditional/Bouddi_National_Park/index.wml#init">
+Bouddi National Park
+</a><br/>
+</p>
+</card>
+<card id="Boulder" title="Boulders">
+<p><b>Choose your location</b><br/>
+<a href="/ccrc/wap.php?file=Boulder/Blackwall_Boulders/index.wml#init">
+Blackwall Boulders
+</a><br/>
+<a href="/ccrc/wap.php?file=Boulder/Bouddi_Bouldering/index.wml#init">
+Bouddi Bouldering
+</a><br/>
+<a href="/ccrc/wap.php?file=Boulder/Reeves_Street_Bouldering/index.wml#init">
+Reeves Street Bouldering
+</a><br/>
+<a href="/ccrc/wap.php?file=Boulder/Rumbalara/index.wml#init">
+Rumbalara
+</a><br/>
+<a href="/ccrc/wap.php?file=Boulder/Wamberal/index.wml#init">
+Wamberal
+</a><br/>
+</p>
+</card>
+<card id="Indoor" title="Indoor Walls">
+<p><b>Choose your location</b><br/>
+<a href="/ccrc/wap.php?file=Indoor/Climb_Fit/index.wml#init">
+Climb Fit
+</a><br/>
+<a href="/ccrc/wap.php?file=Indoor/Kincumber_-_The_Hangover/index.wml#init">
+Kincumber - The Hangover
+</a><br/>
+<a href="/ccrc/wap.php?file=Indoor/Lakehaven/index.wml#init">
+Lakehaven
+</a><br/>
+<a href="/ccrc/wap.php?file=Indoor/X-Treme_Edge/index.wml#init">
+X-Treme Edge
+</a><br/>
+</p>
+</card>
+
+</wml>

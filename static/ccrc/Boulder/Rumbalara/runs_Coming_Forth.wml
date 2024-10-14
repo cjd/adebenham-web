@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id='init' title='Coming Forth'>
+<p>
+<b>Start: </b>middle right side of cave<br/>
+Sit start that begins in middle right side of cave, coming from underneath the lip and ending with headbutting the roof<br/>
+Grade=V1 <br/>
+</p>
+</card>
+</wml>

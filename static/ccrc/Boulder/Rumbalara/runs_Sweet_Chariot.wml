@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id='init' title='Sweet Chariot'>
+<p>
+<b>Start: </b>far right<br/>
+Starts at the same point as Swing Low, but stays high to get past the corner then continues up above the lip. Can be done in either direction<br/>
+Grade=V0 <br/>
+</p>
+</card>
+</wml>

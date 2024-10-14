@@ -1,0 +1,156 @@
+<title>ccrc.css</title>
+/* defaults */
+{
+	background: #505050;
+	background-image: url("/ccrc/images/slate.gif");
+	color: #00FF00;
+	font-size: 12pt;
+	font-family: arial;
+	text-decoration: none;
+
+
+}
+
+body
+{
+	background: #505050;
+	background-image: url("/ccrc/images/slate.gif");
+	color: #00FF00;
+
+scrollbar-face-color: #55ee55;
+scrollbar-shadow-color: #555555;
+scrollbar-highlight-color: #555555;
+scrollbar-3dlight-color: #55ee55;
+scrollbar-darkshadow-color: #55ee55;
+scrollbar-track-color: #55ee55;
+scrollbar-arrow-color: #555555;}
+
+
+
+A
+{
+  text-decoration: none;
+  color: #00FF00;
+  font-weight: bold;
+}
+
+A:hover
+{
+  text-decoration: underline;
+}
+
+
+A.nav
+{
+
+	font-family: Arial;
+	font-size: 14pt;
+	font-weight: bold;
+	text-decoration: none;
+	color: #00FF00;
+}
+
+A.nav:hover 
+{
+	text-decoration: underline;
+}
+
+
+A.link
+{
+    font-size: 12pt;
+    font-family: arial;
+	font-weight: bold;
+	text-decoration: none;
+	color: #00FF00;
+}
+
+A.link:hover
+{
+	text-decoration: underline;
+}
+
+.text
+{
+    font-size: 12pt;
+    font-family: arial;
+	text-decoration: none;
+}
+
+.enter
+{
+	font-family: Arial;
+	font-size: 50pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+
+H1
+{
+	font-family: Arial;
+	font-size: 28pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+H2
+{
+	font-family: Arial;
+	font-size: 18pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.crag
+{
+	font-family: Arial;
+	font-size: 20pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.route
+{
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.section
+{
+	font-family: Arial;
+	font-size: 16pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.sidebar
+{
+	border-style: outset;
+	border-width: 3;
+	border-color: #00FF00;
+}
+
+.sidebar-link
+{
+	border-style: inset;
+	border-width: 2;
+	border-color: #00FF00;
+}
+
+.ieLeiar {
+	position:absolute;
+	visibility:hidden;
+	z-index:100;
+	cursor:default;
+	background-image: url("/ccrc/images/slate.gif")
+}
+
+.item {
+	font-family: sans-serif;
+	font-size: 12pt;
+	color: #00FF00;
+	background-image: url("/ccrc/images/slate.gif");
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id="init" title="Climb Fit">
+<p><a href="#desc">Description</a><br/>
+<a href="#location">Location</a><br/>
+<a href="#runs">Runs</a>
+</p>
+</card>
+<card id='desc' title='Description'>
+<p>Climb Fit is a large indoor climbing gym in St. Leonards.<br/>Go to website for details</p>
+</card>
+<card id='location' title='Location'>
+<p>Drive down the freeway then turn off at Wahroonga.<br/>Keep driving till you hit St. Leonards.<br/>From the corner of Pacific Hwy and Herbert Street, its just a 5 minute walk.<br/>Proceed up herbert street to the first set of lights and go left into frederick street, its the last drive way before the round about number 12. When in the drive way its Unit 4. You can't miss it.</p>
+</card>
+<card id='runs' title='Runs'>
+<p>No Runs</p>
+</card>
+</wml>

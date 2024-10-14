@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id='init' title='Moss City'>
+<p>
+<b>Start: </b>In the middle of the nice slab at the southern end of the crag<br/>
+Up a very thin face then right to a small ledge. Straight up from the ledge, being very careful of crumbly rock (the hole to the right is very crumbly). The bottom section was virtually impossible after two days of rain, as it was covered in moss and slime. A toothbrush for cleaning holds is recommended.<br/>
+Grade=17/18 <br/>
+</p>
+</card>
+</wml>

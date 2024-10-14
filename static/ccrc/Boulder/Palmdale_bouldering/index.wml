@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id="init" title="Palmdale bouldering">
+<p><a href="#desc">Description</a><br/>
+<a href="#location">Location</a><br/>
+<a href="#runs">Runs</a>
+</p>
+</card>
+<card id='desc' title='Description'>
+<p>Some bouldering around and below the main wall at Palmdale crag.<br/>A few small problems on boulders, one or two high-ball problems (about 6-7metres) and a nice large cave with decent roof runs (V4+ at least)</p>
+</card>
+<card id='location' title='Location'>
+<p>Head out to Palmdale (near the crematorium).<br/>Drive towards the National park.<br/>About 2km along the dirt road you will pass through a road cutting. Park just past this.<br/></p>
+</card>
+<card id='runs' title='Runs'>
+<p>No Runs</p>
+</card>
+</wml>

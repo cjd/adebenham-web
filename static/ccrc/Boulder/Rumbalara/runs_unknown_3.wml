@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id='init' title='unknown 3'>
+<p>
+<b>Start: </b>just round the end on the left<br/>
+Starts just round the end on the left, sit start from the boulder with feet under the edge, follows round and links up with the others on the left wall. Simple to start, hard to get around the end<br/>
+Grade=V3 <br/>
+</p>
+</card>
+</wml>

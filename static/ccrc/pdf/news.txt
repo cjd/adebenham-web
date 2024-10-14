@@ -1,0 +1,39 @@
+Title: Site Updated!
+Date: Wednesday, June 25, 2003
+Author: Chris
+Text: After a long time of no updates I\'ve finally got around to it<br>Rumbalara has had more areas added, Jolls bridge gives a link to the full guide and a couple of other little changes
+
+Title: New location - Palmdale
+Date: Monday , July 22, 2002
+Author: Chris
+Text: A new location has been added - Palmdale.<br>Boulders and climbs<br>Check the map for its location (near Ourimbah)
+
+Title: WAP working
+Date: Friday , June 7, 2002
+Author: Chris
+Text: The Wap version of this site is now fully-functional.  Point your phone at www.adebenham.com/ccrc/wap.php to view or click <a href=\"javascript:void(0)\" onmouseover=\"window.status=\'View this page in the Wapalizer from Gelon.net\';return true;\" onmouseout=\"window.status=\'\';return true;\" onclick=\"wap(\'http://www.adebenham.com/ccrc/wap.php\')\">here</a> to browse online in an emulator
+
+Title: Central Coast Map
+Date: Friday , May 31, 2002
+Author: Lachlan
+Text: There is now a map of the Central Coast with hotspots of the crag locations. Just click on the dots to view the page, the crags that have two dots move the mouse on the red for the climbs and the white for the bouldering. To view the map click on the map button in the navigation bar, <A href=\"map.html\" class=link>or click here</a>. 
+
+Title: New Mailing list
+Date: Thursday , March 28, 2002
+Author: Chris
+Text: There is now a mailing list for Central Coast Climbing so we would encourage any coast climbers to join up.<br>Please go to <A href=\"contact.html\" class=link>Contact Us</a> to subscribe.
+
+Title: Website Update
+Date: Wednesday, March 20, 2002
+Author: Chris
+Text: The website has just undergone an overhaul.  All the old info is still here but with more detail added.  Also a version of the site for palm-pilots is available, just go to the download section
+
+Title: Old Guidebook
+Date: Friday, March 1, 2002
+Author: Lachlan
+Text: Can someone please send me the old Central Coast rockclimbing guidebook. Please send any information about climbs, crags, boulders or other webpages about rockclimbing on the Central Coast, that are not on this page.
+
+Title: New Look
+Date: Friday, Febuary 22, 2002
+Author: Lachlan
+Text: The index page is finished and the site should be uploaded by the end of this weekend. The address has changed because i lost the passwords for the other page, hope you like this one.

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id='init' title='15plus Variant'>
+<p>
+<b>Start: </b>From the base of the finger crack on 15+<br/>
+From the base of the finger crack on 15+, head left and up on small crimpers.<br/>
+Grade=20 *<br/>
+</p>
+</card>
+</wml>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id="init" title="Wards Hill">
+<p><a href="#desc">Description</a><br/>
+<a href="#location">Location</a><br/>
+<a href="#runs">Runs</a>
+</p>
+</card>
+<card id='desc' title='Description'>
+<p>A surprisngly impressive crag located right beside Ward's Hill Rd, Empire Bay.<br/>The crag has two distinct walls - the first is a nice looking 10m high grey wall with 5 or 6 mainly bolted routes (old carrots plus some rather mangled fixed hangers). The main wall is a bit further on, and reaches about 20m in height, with superb orange rock at the base. There look to be about another half dozen routes or so on this wall, with a variety of carrots and fixed hangers for protection.<br/><br/></p>
+</card>
+<card id='location' title='Location'>
+<p>To get to the crag, park in the carpark at the top of the hill (at the corner of Ward's Hill Rd and Maitland Bay Drive) and find a track that heads off into the bush, parallel to Ward's Hill Rd. Alternatively, you can walk down Ward's Hill road (take care!) to the first hairpin, and follow a track off to the right that leads up to the crag.</p>
+</card>
+<card id='runs' title='Runs'>
+<p>No Runs</p>
+</card>
+</wml>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id="init" title="West Gosford">
+<p><a href="#desc">Description</a><br/>
+<a href="#location">Location</a><br/>
+<a href="#runs">Runs</a>
+</p>
+</card>
+<card id='desc' title='Description'>
+<p>A neat little crag just behind Hardware House at West Gosford<br/>There is also a smaller area located on Debenham Road.</p>
+</card>
+<card id='location' title='Location'>
+<p>Drive out West Gosford then head along Manns Road until you reach Stockyard Place then turn at the traffic lights up Stockyard Place towards Hardware house (also called Bunnings Hardware) and park at the end of that road.<br/>The crag is just up and to the right of the road.</p>
+</card>
+<card id='runs' title='Runs'>
+<p>No Runs</p>
+</card>
+</wml>

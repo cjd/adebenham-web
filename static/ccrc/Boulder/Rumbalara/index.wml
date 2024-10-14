@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id="init" title="Rumbalara">
+<p><a href="#desc">Description</a><br/>
+<a href="#location">Location</a><br/>
+<a href="#runs">Runs</a>
+</p>
+</card>
+<card id='desc' title='Description'>
+<p>A nice large cave with good overhanging runs and some pocketed routes as well as a 20m long flat wall and scattered boulders</p>
+</card>
+<card id='location' title='Location'>
+<p>Go up to rumbalara and go to the end of the road.<br/>At the end the road wraps back around itself and on the side there are some toilets. Park here.<br/>To get to the cave head directly down the hill from where the toilets are and it drops off.<br/>Get down this drop off and head left and you wil find a cave (very obvious as to which one as it is very large.<br/><br/>To get to the flat wall, head back down the road  and follow the path to your right. It will meet up with a wide disabled walking trail. Continue along this trail until you reach a sculpture. Just past this there is a descent gully on the right that heads down to a path. The climbs are along this path in both directions.</p>
+</card>
+<card id='runs' title='Runs'>
+<p><a href="/ccrc/wap.php?file=Boulder/Rumbalara/runs_Swing_Low.wml#init">Swing Low</a><br/>
+<a href="/ccrc/wap.php?file=Boulder/Rumbalara/runs_Sweet_Chariot.wml#init">Sweet Chariot</a><br/>
+<a href="/ccrc/wap.php?file=Boulder/Rumbalara/runs_Coming_Forth.wml#init">Coming Forth</a><br/>
+<a href="/ccrc/wap.php?file=Boulder/Rumbalara/runs_To_Carry.wml#init">To Carry</a><br/>
+<a href="/ccrc/wap.php?file=Boulder/Rumbalara/runs_Me_Home.wml#init">Me Home</a><br/>
+<a href="/ccrc/wap.php?file=Boulder/Rumbalara/runs_unknown_1.wml#init">unknown 1</a><br/>
+<a href="/ccrc/wap.php?file=Boulder/Rumbalara/runs_unknown_2.wml#init">unknown 2</a><br/>
+<a href="/ccrc/wap.php?file=Boulder/Rumbalara/runs_unknown_3.wml#init">unknown 3</a><br/>
+<a href="/ccrc/wap.php?file=Boulder/Rumbalara/runs_Rumbalara_Rumble.wml#init">Rumbalara Rumble</a><br/>
+<a href="/ccrc/wap.php?file=Boulder/Rumbalara/runs_Traverse.wml#init">Traverse</a><br/>
+<a href="/ccrc/wap.php?file=Boulder/Rumbalara/runs_Unnamed.wml#init">Unnamed</a><br/>
+</p>
+</card>
+</wml>

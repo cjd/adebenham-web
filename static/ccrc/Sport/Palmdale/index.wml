@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+<card id="init" title="Palmdale">
+<p><a href="#desc">Description</a><br/>
+<a href="#location">Location</a><br/>
+<a href="#runs">Runs</a>
+</p>
+</card>
+<card id='desc' title='Description'>
+<p>Two climbing spots either side of the road.<br/>Most runs look 24+</p>
+</card>
+<card id='location' title='Location'>
+<p>Head out to Palmdale (near the crematorium).<br/>Drive towards the National park.<br/>About 2km along the dirt road you will pass through a road cutting. Park just past this.<br/>The climbs are on either side of the road here</p>
+</card>
+<card id='runs' title='Runs'>
+<p><a href="/ccrc/wap.php?file=Sport/Palmdale/runs_unknown_2.wml#init">unknown 2</a><br/>
+</p>
+</card>
+</wml>
