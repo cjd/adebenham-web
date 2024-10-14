@@ -1,0 +1,39 @@
+!
+! This is an `xmodmap' input file for 
+!   PC 101 key, thin Delete, tall Enter (XFree86; US) keyboards.
+! Automatically generated on Sun Dec 21 08:25:48 2003 by cjd with
+! XKeyCaps 2.46; Copyright (c) 1999 Jamie Zawinski <jwz@jwz.org>.
+! http://www.jwz.org/xkeycaps/
+!
+! This file presupposes that the keyboard is in the default state, and
+! may malfunction if it is not.
+!
+remove Mod5    = Scroll_Lock
+
+keycode 0x43 =	F1	XF86_Switch_VT_1
+keycode 0x44 =	F2	XF86_Switch_VT_2
+keycode 0x45 =	F3	XF86_Switch_VT_3
+keycode 0x46 =	F4	XF86_Switch_VT_4
+keycode 0x47 =	F5	XF86_Switch_VT_5
+keycode 0x48 =	F6	XF86_Switch_VT_6
+keycode 0x49 =	F7	XF86_Switch_VT_7
+keycode 0x4A =	F8	XF86_Switch_VT_8
+keycode 0x4B =	F9	XF86_Switch_VT_9
+keycode 0x4C =	F10	XF86_Switch_VT_10
+keycode 0x5F =	F11	XF86_Switch_VT_11
+keycode 0x60 =	F12	XF86_Switch_VT_12
+keycode 0x6F =	Print	Sys_Req
+keycode 0x16 =	BackSpace	Terminate_Server
+keycode 0x70 =	KP_Divide	XF86_Ungrab
+keycode 0x3F =	KP_Multiply	XF86_ClearGrab
+keycode 0x52 =	KP_Subtract	XF86_Prev_VMode
+keycode 0x56 =	KP_Add	XF86_Next_VMode
+keycode 0x62 =	Left
+keycode 0x40 =	Alt_L	Meta_L
+keycode 0x71 =	Alt_R	Meta_R
+keycode 0x64 =	Down
+keycode 0x68 =	Right
+keycode 0x66 =	Up
+
+add    Mod3    = Mode_switch
+add    Mod4    = Super_L Super_R
