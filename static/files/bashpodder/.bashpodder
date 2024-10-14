@@ -1,0 +1,32 @@
+#LOGDIR:/home/cjd/.bashpodder_logs
+#PODDIR:/home/cjd/Media/podcasts
+# Feeds to download
+http://www.democracynow.org/podcast.xml # Democracy now
+http://austereo.castmetrix.net/rss/162129586585337877 # Hamish and Andy
+http://revision3.com/diggnation/feed/xvid-large # Diggnation
+http://revision3.com/epicfu/feed/xvid-large # EpicFu
+http://revision3.com/scamschool/feed/xvid-large # Scamschool
+http://revision3.com/tekzilla/feed/xvid-large # Tekzilla
+http://revision3.com/webdrifter/feed/xvid-large # Webdrifter
+http://revision3.com/hak5/feed/xvid-large # Hak5
+http://revision3.com/systm/feed/xvid-large # Systm
+http://revision3.com/trs/feed/xvid-large # The Totally Rad Show
+http://revision3.com/coop/feed/xvid-large
+http://revision3.com/rofl/feed/xvid-large # ROFL
+http://feeds.feedburner.com/AskANinja # Ask a Ninja
+http://news.ninemsn.com.au/podcast/ninenewsnow/video/ # Nine news
+http://www.qdnow.com/grammar.xml # Grammar Girl
+http://www.qdnow.com/manners.xml # Modern Manners
+#http://twit.tv/node/feed # Twit.tv
+http://feeds2.feedburner.com/meetthegimp # Meet the GIMP
+http://abc.net.au/tv/goodgame/video/vodcast/goodgame_mp4.xml # Good Game
+http://abc.net.au/mediawatch/vodcast/mediawatch_mp4.xml # Media watch
+http://www.mythtvcast.com/rss.php # MythTVCast
+http://revision3.com/diggreel/feed/Xvid-Large
+http://revision3.com/hdnation/feed/Xvid-Large
+http://revision3.com/jvsworld/feed/Xvid-Large
+http://www.engadget.com/engadgetshow.xml
+#http://revision3.com/bytejacker/feed/Xvid-Large
+http://revision3.com/appjudgment/feed/Xvid-Large
+http://revision3.com/instmsgs/feed/Xvid-Large
+http://revision3.com/landlinetv/feed/Xvid-Large
