@@ -1,0 +1,1022 @@
+#!/usr/bin/perl -w
+
+########################################################################
+#  This is the server for the mp3 server box (www.igalaxie.com/ltt/mp3/)
+#  Copyright Jerome Kerdreux (Jerome.Kerdreux@finix.EU.org) 1999
+#
+#
+#  Version 0.2 
+########################################################################
+
+use Socket;        # used by Socket IO .. of course
+use IPC::Open2;    # Open2 (bi-pipe)
+use FileHandle;    # Auto Flush ..
+use DBI;           # For MySQL
+use strict;
+
+my $host  = "localhost";
+my $mp3db = "mp3db";
+
+# The name path of the log files
+my($log_file)="/tmp/ltt_mp3.log";
+my($nslog_file)="/tmp/ltt_mp3ns.log";
+#my ($log_file)   = "/dev/null";
+#my ($nslog_file) = "/dev/null";
+
+# the mp3 player path
+my ($player) = "xmms123";
+
+# the place where you put the equalizer files
+my ($equal_dir) = "/tmp";
+my ($sync)      = "/usr/local/bin/mp3sync";
+
+# Set this to 1 if you want to have the console 
+# please unset this if you launch mp3sb in background
+my ($show_console) = 0;
+
+# DON'T EDIT ANYTHING BELOW !!!! 
+
+my ($time)   = "--:--";
+my ($status) = "IniT ";
+
+my (@play);
+my ($current) = 1;
+my ($c_offset) = 1;
+
+my ($pause) = 0;      # 0 => play 1=>paused
+my ($level) = 100;    # the default volume is 100 (max) .. you can change it
+
+my (@equal)   = "";
+my ($c_equal) = "Not SET";
+my ($nframe)  = 1;
+
+my ($pid);
+my ($statistic_flag) = 0;
+
+my ($playlist) = 0;
+
+my (%mode) = (
+	'playlist'        => 0,
+	'shuffle'         => 0,
+	'scan'            => 0,
+	'repeat_song'     => 0,
+	'repeat_playlist' => 0
+);
+
+my $cls      = `clear`;
+my $last_cmd = "";
+
+# globals
+my ($dbh, $sth, @cnx, $current_id, $thesocket, $con);
+
+#---------------------------------------------------------------------------
+#        Name: fisher_yates_shuffle( \@array ) : 
+# Description: generate a random permutation of @array in place
+#   Arguments: reference to an array
+#     Returns: none
+#---------------------------------------------------------------------------
+sub fisher_yates_shuffle {
+	my $array = shift;
+	my $i;
+	for ($i = @$array ; --$i ;) {
+		my $j = int rand($i + 1);
+		next if $i == $j;
+		@$array[$i, $j] = @$array[$j, $i];
+	}
+} ## end sub fisher_yates_shuffle
+
+#----------------------------------------------------------------------------
+sub msg_log {
+
+	# print the a message in the log file !! 
+	my $date;
+
+	if ($log_file) {
+
+		# the quick and dirty date string 
+		$date = localtime();
+		print LOG_FILE " $date : @_ \n";
+	} ## end if ($log_file)
+
+} ## end sub msg_log
+
+#----------------------------------------------------------------------------
+sub ns_log {
+
+	# print the a message in the log file !! 
+	my $date;
+
+	if ($nslog_file) {
+
+		# the quick and dirty date string 
+		$date = localtime();
+		print NS_LOG_FILE " $date : @_ \n";
+	} ## end if ($nslog_file)
+
+} ## end sub ns_log
+
+#------------------------------------------------------------------------------
+sub init_mysql {
+
+	$dbh = DBI->connect("DBI:mysql:$mp3db:$host", "mp3", "") || die "DBI:err";
+
+}
+
+#--------------------------------------------------------------------------------
+sub song_info {
+	my $id = shift @_;
+	my $info;
+	my $sql =
+"SELECT id,artist,album,songname,genre,min,sec,hits FROM mp3main where id=$id";
+	$sth = $dbh->prepare($sql)
+	  or die "Can't prepare statement: $dbh->errstr\n";
+	$sth->execute;
+	my $nb = $sth->rows;
+
+	if ($nb) {
+		my @row = $sth->fetchrow_array;
+
+		foreach (@row) {
+			if (!$_) { $_ = " "; }  # lot of pb in C cause me to avoid || string
+			$info = "$info|$_";
+		}
+	} ## end if ($nb)
+
+	return $info;
+
+	return "Error : Unknow song $id";
+
+} ## end sub song_info
+
+#-------------------------------------------------------------------------------
+sub qload {
+
+	my $playlist_wanted = shift @_;
+	my ($sql);
+
+	if ($playlist_wanted && ($playlist_wanted > 0)) {
+		$sql =
+"SELECT songid FROM playlist WHERE listid=$playlist_wanted order by id";
+		$mode{playlist} = 1;
+	} else {
+		$sql = "SELECT id FROM mp3main order by artist,album,songnb";
+		$mode{playlist} = 0;
+		$playlist = 0;
+	}
+
+	$sth = $dbh->prepare($sql)
+	  or die "Can't prepare statement: $dbh->errstr\n";
+	$sth->execute;
+	my $nb = $sth->rows;
+	msg_log("There is $nb answer in this Playlist");
+	my $i = 0;
+
+	if ($nb) {
+		splice(@play, 0);
+		while (my @row = $sth->fetchrow_array) {
+
+			$play[$i] = $row[0];
+			$i++;
+
+			#            print " $i $play[$i] \n";
+		} ## end while (@row = $sth->fetchrow_array...
+
+		$sth->finish;
+		if ($mode{'shuffle'}) { fisher_yates_shuffle(\@play); }
+		return ("Ok : $nb songs in this playlist");
+	} ## end if ($nb)
+
+} ## end sub qload
+
+#-------------------------------------------------------------------------------
+sub init {
+
+	# open the log file if defined
+	#
+
+	if ($log_file) {
+		open(LOG_FILE, ">>$log_file") or die "Can open log file  ";
+		msg_log("Starting login Process");
+
+		# this is for Auto-flsuh from FileHandle
+		LOG_FILE->autoflush();
+
+	} ## end if ($log_file)
+
+	if ($nslog_file) {
+		open(NS_LOG_FILE, ">>$nslog_file") or die "Can open nslog file  ";
+		ns_log("Starting login Process");
+
+		# this is for Auto-flsuh from FileHandle
+		NS_LOG_FILE->autoflush();
+
+	} ## end if ($nslog_file)
+
+	init_mysql();
+
+} ## end sub init
+
+sub close_quit {
+
+	&msg_log("The server going down");
+
+	for (my $i = 0 ; $i < scalar(@cnx) ; $i++) {
+		my $this = $cnx[$i]{'NS'};
+		if ($this ne "") {
+			print $this "--------[Bye Bye]-------\n";
+			close($this) or ns_log("Pb with closing socket");
+		}
+	} ## end for ($i = 0 ; $i < scalar...
+
+	mp3_command("quit");
+	close_player();
+	close(NS_LOG_FILE);
+	close(LOG_FILE);
+	print "\nMp3 server is now down \n";
+	exit 0;
+
+} ## end sub close_quit
+
+#----------------------------------------------------------------------------
+sub find_current {
+
+	# If we are in direct play we need to find out where we are 
+	# else we don't care .. in fact no but who cares !! 
+	if (!($mode{playlist})) {
+		for (my $i = 0 ; $i < scalar(@play) ; $i++) {
+			if ($play[$i] eq $current_id) {
+				$current = $i;
+			}
+
+		} ## end for ($i = 0 ; $i < scalar...
+	} ## end if (!($mode{playlist})...
+
+} ## end sub find_current
+
+#----------------------------------------------------------------------------
+
+sub go_play {
+	my $i = shift @_;
+	my $nb;
+
+	$i = 0 unless $i;
+	my $sql = "SELECT filename  FROM mp3main WHERE id = $i";
+	$sth = $dbh->prepare($sql)
+	  or die "Can't prepare statement: $dbh->errstr\n";
+	$sth->execute();
+	my @row = $sth->fetchrow_array;
+	$nb  = $sth->rows;
+
+	if ($nb) {
+		system("rm /tmp/foo.mp3");
+		system("ln -s \"$row[0]\" /tmp/foo.mp3");
+		mp3_command("load $row[0]");
+		$current_id = $i;
+		find_current();
+		return "Ok";
+
+	} ## end if ($nb)
+
+	else {
+		return "Error : Unable to play this song";
+	}
+
+} ## end sub go_play
+
+###############################################################################
+### Check if the content of database change from @play queue
+##  if .. call the qload to reload the @play.
+## Be aware that adding song while you are in shuffle will cause to 
+## reshuffle it .. so you can here song twice or more !!
+## We compute a small checksum to find the difference 
+###############################################################################
+sub check_queue {
+
+	my ($sql);
+	if ($playlist == 0) {
+		$sql = "SELECT sum(id) FROM mp3main";
+	} else {
+		$sql = "SELECT sum(songid) FROM playlist where listid=$playlist";
+	}
+
+	$sth = $dbh->prepare($sql)
+	  or die "Can't prepare statement: $dbh->errstr\n";
+	$sth->execute;
+	my @row = $sth->fetchrow_array;
+
+	my $check = 0;
+	foreach my $id (@play) {
+		$check = $check + $id;
+	}
+
+	if ($row[0] != $check) {
+		msg_log("Force reload of queue");
+		qload($playlist);
+		find_current();
+	}
+
+} ## end sub check_queue
+
+###############################################################################
+### 
+###############################################################################
+sub go_play_next {
+
+	check_queue();
+	my ($result);
+	if ($current < (scalar(@play) - 1)) {
+		if (!$mode{'repeat_song'}) { $current++; }
+		go_play($play[$current]);
+		$result = "Ok";
+	} else {
+		if ($mode{'repeat_playlist'}) {
+			$current = 0;
+			msg_log("LOOPING Playlist");
+			go_play($play[$current]);
+			$result = "Ok";
+		} else {
+			$result = "End of Playlist";
+		}
+
+	} ## end else
+
+	return $result;
+
+} ## end sub go_play_next
+
+###############################################################################
+### 
+###############################################################################
+sub go_play_prev {
+	my ($result);
+	check_queue();
+	if ($current > 0) {
+		$current--;
+		go_play($play[$current]);
+		$result = "Ok";
+	} else {
+
+		$current = 0;
+		$result  = "Begin of Playlist";
+
+	} ## end else
+	return $result;
+} ## end sub go_play_prev
+
+#----------------------------------------------------------------------------
+sub mp3_command {
+	print PLAYOUT "@_\n";
+	msg_log("[MP3 COMMAND] @_");
+}
+
+#----------------------------------------------------------------------------
+sub close_player {
+
+	# My thanks goes to gandalf for this :) 
+	my ($child);
+	while ($child = waitpid(-1, &WNOHANG) && abs($child) != 1) {
+		close(PLAYOUT);
+		close(PLAYIN);
+		msg_log("Player died");
+	}
+} ## end sub close_player
+
+#----------------------------------------------------------------------------
+sub read_equal {
+
+	opendir(EQUAL, $equal_dir);
+	@equal = grep !/^\.\.?$/, readdir EQUAL;
+	closedir EQUAL;
+} ## end sub read_equal
+
+#--------------------------------------------------------------------------
+sub refresh {
+	my ($line);
+
+	# $line = <PLAYIN>;
+	$line = &readline(\*PLAYIN);
+
+	if ($line) {
+
+		SWITCH:
+		{
+
+			if ($line =~ /^\@F\s*(\d*)\s*(\d*)\s*(\d*)\s*(\d*)/) {
+				$time = sprintf("%02d:%02d", ($3 / 60) % 60, $3 % 60);
+				$status   = "Playing";
+				$c_offset = int(($1 / ($1 + $2) * 400));
+				$nframe   = $1 + $2;
+
+				# This is a bit uggly .. but due to asyncrhone system of select .. 
+				# I can't put this anywhere else .. 
+				# Check if we reach 10 secondes of sound .. and skip to the next song 
+				# if we are in scan mode .. 
+
+				if ($1 == 400 and $mode{'scan'} == 1) {
+
+					msg_log("SCAN");
+					go_play_next();
+				}
+
+				if ($c_offset <= 10) {
+					$statistic_flag = 1;
+				}
+
+				last SWITCH;
+
+			} ## end if ($line =~ /^\@F\s*(\d*)\s*(\d*)\s*(\d*)\s*(\d*)/...
+
+			if ($line =~ /^\@P 3/) {
+				$status = "Finish";
+				last SWITCH;
+			}
+
+			if ($line =~ /^\@P 1/) {
+				$status = "Paused";
+				last SWITCH;
+			}
+
+			if ($line =~ /^\@VOL (\d*)/) {
+				$level = $1;
+				last SWITCH;
+			}
+
+			if ($line =~ /^\@I */) {
+				last SWITCH;
+			}
+
+			if ($line =~ /^\@S .*/) {
+				last SWITCH;
+			}
+
+			chop($line);
+			msg_log($line);
+
+		} ## end SWITCH:
+
+		# Good for debugging show the none parsed line .
+		# print  " ..... $line ";
+
+		#chop($line);
+		#msg_log($line);
+		#print "..";
+
+	}    #endoif
+
+	else {
+
+		# Hum If we are here .. mpg123 is dead  .. so we need to relaunch it 
+		# most of the time this is due to a illegal file or a file not found 
+		# so i think the best thing is to skip this song 
+
+		close_player();
+		init_player();
+		$mode{'repeat_song'} = 0;
+		go_play_next();
+	} ## end else
+
+} ## end sub refresh
+
+#------------------------------------------------------------------------------
+sub init_player {
+
+	# open the dual_pipe_stream
+
+	$pid = open2(\*PLAYIN, \*PLAYOUT, $player) or die "Impossible !!";
+	if ($pid) {
+		msg_log("Starting mp3 player with pid $pid  .. ");
+	}
+	set_volume($level);
+} ## end sub init_player
+
+#------------------------------------------------------------------------
+sub readline {
+
+	# 'select'-compatible function for reading one line of input from 
+	#    a filehandle.
+	#    
+	#    readline() expects one argument -- filehandle S
+	#
+	#    sample call:       $mystring = readline('S')
+	#
+	# used by socket !!! to read arriving data 
+
+	my $filehandle = $_[0];
+	my $c          = '';
+	my $retstr     = '';
+	my $endoffile  = 0;
+	my $temp       = 0;
+
+	while ($c ne "\n" && !$endoffile) {
+		if (sysread($filehandle, $c, 1) > 0) {
+			$retstr = $retstr . $c;
+		} else {
+			$endoffile = 1;
+		}
+	} ## end while ($c ne "\n" && !$endoffile...
+
+	return $retstr;
+} ## end sub readline
+
+#---------------------------------------------------------------------
+
+#------------------------------------------------------------------------------
+sub set_volume {
+
+	# show the main volume
+
+	my $wanted = shift @_;
+	if ($wanted >= 0) {
+		$level = $wanted;
+		mp3_command("VOL $wanted");
+		return "Ok : $level";
+	}
+
+} ## end sub set_volume
+
+sub toggle_mode {
+	my ($set)  = shift @_;
+	my ($temp) = $mode{$set};
+	if ($mode{$set} == 1) {
+		$mode{$set} = 0;
+	} else {
+		$mode{$set} = 1;
+	}
+	msg_log("MODE :$set changed from $temp To $mode{$set}");
+} ## end sub toggle_mode
+
+#-----------------------------------------------------------------------------
+sub parse_input {
+
+	my $ch = shift @_;
+	my ($result);
+
+	#    print "$ch received\n";
+
+	#    $ch =~ tr/[a-z]/[A-Z]/;
+	SWITCH:
+	{
+
+		if ($ch eq "") {
+			last SWITCH;
+		}
+
+		if ($ch eq "PLAY+") {
+
+			# Hum a strange behaviour .. not really !!
+			# I want that client can use next song even if we are in
+			# repeat_mode 
+			my ($temp) = $mode{'repeat_song'};
+			$mode{'repeat_song'} = 0;
+			$result = go_play_next;
+			$mode{'repeat_song'} = $temp;
+			last SWITCH;
+		} ## end if ($ch eq "PLAY+")
+
+		if ($ch eq "PLAY-") {
+
+			#same as PLAY+
+			my ($temp) = $mode{'repeat_song'};
+			$mode{'repeat_song'} = 0;
+			$result = go_play_prev;
+			$mode{'repeat_song'} = $temp;
+			last SWITCH;
+		} ## end if ($ch eq "PLAY-")
+
+		if ($ch eq "SHUFFLE") {
+			toggle_mode('shuffle');
+			$result = qload($playlist);
+			find_current();
+			last SWITCH;
+		} ## end if ($ch eq "SHUFFLE")
+
+		if ($ch eq "SEEK+") {
+			mp3_command("jump +300");
+			$result = "Ok";
+			last SWITCH;
+		}
+
+		if ($ch eq "SEEK-") {
+			mp3_command("jump -300");
+			$result = "Ok";
+			last SWITCH;
+		}
+
+		if ($ch =~ /^SEEK (\d+)/) {
+			$c_offset = $1;
+			my $seek = ($1 * $nframe) / 400;
+			mp3_command("jump $seek");
+			$result = "Ok";
+			last SWITCH;
+
+		} ## end if ($ch =~ /^SEEK (\d+)/...
+
+		if ($ch eq "VOL+") {
+			$result = set_volume($level + 5);
+			last SWITCH;
+
+		}
+
+		if ($ch eq "VOL") {
+			$result = "Ok : $level";
+			last SWITCH;
+
+		}
+
+		if ($ch eq "VOL-") {
+			$result = set_volume($level - 5);
+			;
+			last SWITCH;
+
+		} ## end if ($ch eq "VOL-")
+
+		if ($ch =~ /^VOL (\d+)/) {
+			$result = set_volume($1);
+			last SWITCH;
+
+		}
+
+		if ($ch eq "STATUS") {
+			my ($temp) = int($c_offset / 4);
+			$result =
+"$status|$current_id|$c_offset|$temp|$time|$level|$current|$playlist|$mode{'scan'}$mode{'repeat_song'}$mode{'playlist'}$mode{'shuffle'}$mode{'repeat_playlist'}";
+			last SWITCH;
+
+		} ## end if ($ch eq "STATUS")
+
+		if ($ch =~ /^PLAY (\d+)/) {
+
+			$result = go_play($1);
+			last SWITCH;
+		}
+
+		if ($ch eq "PAUSE") {
+			if ($status eq "Playing") {
+				mp3_command("pause");
+			}
+			$result = "Ok";
+			last SWITCH;
+
+		} ## end if ($ch eq "PAUSE")
+
+		if ($ch eq "PLAY") {
+			if ($status eq "Paused") {
+				mp3_command("pause");
+			}
+			$result = "Ok";
+			last SWITCH;
+
+		} ## end if ($ch eq "PLAY")
+
+		if ($ch =~ /^QLOAD (\d+)/) {
+			$result = &qload($1);
+			if ($result) {
+				$playlist = $1;
+				$current  = 0;
+				go_play($play[$current]);
+			} else {
+				$result = "Error : Unable to load playlist [$1]";
+			}
+			last SWITCH;
+		} ## end if ($ch =~ /^QLOAD (\d+)/...
+
+		if ($ch =~ /^QLOAD/) {
+			$result = &qload($1);
+			find_current();
+			last SWITCH;
+
+		} ## end if ($ch =~ /^QLOAD/)
+
+		if ($ch =~ /^SONG_INFO (\d+)/) {
+			$result = &song_info($1);
+			last SWITCH;
+		}
+
+		if ($ch =~ /^MSG (.*)/) {
+			my $msg = $1;
+			for (my $i = 0 ; $i < scalar(@cnx) ; $i++) {
+				my $this = $cnx[$i]{'NS'};
+				if ($this ne "") {
+					print $this "MSG: $msg\n";
+				}
+			} ## end for ($i = 0 ; $i < scalar...
+			$result = "--";
+			last SWITCH;
+		} ## end if ($ch =~ /^MSG (.*)/...
+
+		if ($ch eq "SONG_INFO") {
+			$result = &song_info($current_id);
+			last SWITCH;
+		}
+
+		if ($ch eq "LIST_INFO") {
+			foreach (@play) {
+
+				$result = "$result" . &song_info($_) . "\n";
+			}
+			last SWITCH;
+		} ## end if ($ch eq "LIST_INFO"...
+
+		if ($ch eq "SHUTDOWN") {
+
+			# This is a big security Hole !!!! comment It if u use the mp3 server in
+			# production condition !!!!
+			$result = "Ok";
+			exec "/sbin/shutdown -h now";
+
+			# Never reached
+			# last SWITCH;
+
+		} ## end if ($ch eq "SHUTDOWN")
+
+		if ($ch eq "KILL") {
+			&close_quit();
+		}
+
+		if ($ch =~ /^SYNC(.*)/) {
+			my $cmd = "$sync $1 >/dev/null &";
+			msg_log("Scyncr request for $cmd");
+			system($cmd);
+			$result = "Ok";
+			last SWITCH;
+		} ## end if ($ch =~ /^SYNC(.*)/...
+
+		if ($ch =~ /^EQUAL (\d+)/) {
+			&read_equal();
+			if (($1 >= 0) and ($1 < scalar(@equal))) {
+				mp3_command("EQUALIZE $equal_dir$equal[$1]");
+				$c_equal = $1;
+				$result  = "Ok";
+
+			} else {
+				$result = "Error : Unable to find equalfile";
+			}
+			last SWITCH;
+		} ## end if ($ch =~ /^EQUAL (\d+)/...
+
+		if ($ch =~ /^EQUAL/) {
+			$result = "Ok : $c_equal";
+			last SWITCH;
+		}
+
+		if ($ch =~ /^LIST_EQUAL/) {
+			$result = "";
+			&read_equal();
+			for (@equal) {
+				$result = "$result|$_";
+			}
+			last SWITCH;
+
+		} ## end if ($ch =~ /^LIST_EQUAL/...
+
+		if ($ch eq "LIST_MODE") {
+
+			foreach (keys(%mode)) {
+				$result = "$result|$_ $mode{$_}";
+
+			}
+
+			last SWITCH;
+		} ## end if ($ch eq "LIST_MODE"...
+
+		if ($ch eq "SCAN") {
+			toggle_mode('scan');
+			go_play_next() if ($mode{'scan'});
+			$result = 'Ok';
+			last SWITCH;
+		} ## end if ($ch eq "SCAN")
+
+		if ($ch eq "REPEAT_SONG") {
+			toggle_mode('repeat_song');
+			$result = 'Ok';
+			last SWITCH;
+		}
+
+		if ($ch eq "REPEAT_PLAYLIST") {
+			toggle_mode('repeat_playlist');
+			$result = 'Ok';
+			last SWITCH;
+		}
+
+		if ($ch eq "RANDOM") {
+			$current = int(rand(@play));
+			go_play($current);
+			$result = 'Ok';
+			last SWITCH;
+		} ## end if ($ch eq "RANDOM")
+
+		if ($ch =~ /^HELLO (\w+) (\w+)/) {
+			for (my $i = 0 ; $i < scalar(@cnx) ; $i++) {
+				my $this = $cnx[$i]{'NS'};
+				if ($this eq $thesocket) {
+					$cnx[$i]{'client'} = $1;
+					$cnx[$i]{'user'}   = $2;
+					$result = 'Ok';
+					last;
+				} ## end if ($this eq $thesocket...
+
+			} ## end for ($i = 0 ; $i < scalar...
+			last SWITCH;
+		} ## end if ($ch =~ /^HELLO (\w+) (\w+)/...
+
+		$result = "Error : Unknow command [$ch]";
+
+	} ## end SWITCH:
+
+	return $result;
+
+} ## end sub parse_input
+
+#####################################################################
+###
+####################################################################
+sub display_logued {
+	my ($i);
+	format LOGUED=
+[@<<<] @<<<<<<<<<<<<<<<@<<<<<<<< (@<<<<<<<<<<<<) 
+$cnx[$i]{'NS'},$cnx[$i]{'user'},$cnx[$i]{'client'},$cnx[$i]{'ip'}
+.
+	$~ = "LOGUED";
+
+	print $cls;
+	print "------------------------------------------------\n";
+	print "Total : " . scalar(@cnx) . " users and $con \n";
+	print "------------------------------------------------\n";
+
+	for ($i = 0 ; $i < scalar(@cnx) ; $i++) {
+
+		if ($last_cmd eq $cnx[$i]{'NS'}) { print "\033[01;45\n"; }
+		else { print "\033[00\n"; }
+
+		write;
+	} ## end for ($i = 0 ; $i < scalar...
+	print "\033[00\n";
+	print "------------------------------------------------\n";
+
+} ## end sub display_logued
+
+#---------------------------------------------------------------------------------------
+print "\nStarting MP3 Server !! \n";
+
+$SIG{TERM} = \&close_quit;
+$SIG{KILL} = \&close_quit;
+$SIG{INT}  = \&close_quit;
+
+# Hum using a sig(child) is a bad idea because the use 
+# of sync command call this sig .. 
+#$SIG{CHLD} = \&reload_player ;
+
+# Open log files
+&init();
+
+# init the TCP mode  
+my ($port) = @ARGV;
+$port = 2345 unless $port;
+
+my ($name, $aliases, $proto) = getprotobyname('tcp');
+
+if ($port !~ /^\d+$/) {
+	($name, $aliases, $port) = getservbyport($port, 'tcp');
+}
+
+ns_log("Listening on port $port...");
+
+socket(S, AF_INET, SOCK_STREAM, $proto) || die "socket : $!";
+
+my $sockaddr = 'S n a4 x8';
+my $this = pack($sockaddr, AF_INET, $port, "\0\0\0\0");
+bind(S, $this) || die "bind : $!";
+
+listen(S, 10) || die "listen: $!";
+
+select(S);
+$| = 1;
+select(STDOUT);
+$con = 0;
+
+$0 = "Mp3 serv [$port]";
+
+#-----------------------------------------------------------------------------------
+
+&init_player();
+
+&qload();
+
+# quick and again dirty way to find the last played song ID .. and launch it !! 
+my $sql = "SELECT id from mp3main ORDER BY lastdate DESC";
+$sth = $dbh->prepare($sql) or die "Can't prepare statement: $dbh->errstr\n";
+$sth->execute();
+my @row = $sth->fetchrow_array;
+go_play($row[0]);
+
+while (1) {
+
+	my $rin = '';
+	my ($rout);
+
+	vec($rin, fileno(S),      1) = 1;
+	vec($rin, fileno(PLAYIN), 1) = 1;
+
+	# vec creation .. for each NS 
+	for (my $i = 0 ; $i < scalar(@cnx) ; $i++) {
+		if ($cnx[$i]{'NS'} ne "") {
+			vec($rin, fileno($cnx[$i]{'NS'}), 1) = 1;
+		}
+	}
+
+	(undef, undef) = select($rout = $rin, undef, undef, .5);
+
+	if (vec($rout, fileno(S), 1)) {
+
+		$con++;
+
+		my $l = scalar(@cnx);
+
+		(my $addr = accept($cnx[$l]{'NS'}, S)) || die $!;
+
+		select($cnx[$l]{'NS'});
+		$| = 1;
+		select(STDOUT);
+
+		my (undef, $port, $inetaddr) = unpack($sockaddr, $addr);
+
+		my @inetaddr = unpack('C4', $inetaddr);
+		my $ip = "$inetaddr[0].$inetaddr[1].$inetaddr[2].$inetaddr[3]";
+		ns_log("New connection from NS$con $ip");
+		$cnx[$l]{'user'}   = "unknow";
+		$cnx[$l]{'client'} = "unknow";
+		$cnx[$l]{'ip'}     = $ip;
+		if ($show_console) { &display_logued(); }
+	} ## end if (vec($rout, fileno(...
+
+	elsif (vec($rout, fileno(PLAYIN), 1)) {
+		refresh();
+
+		# Here we are at the end of a song ..
+		if ($status eq "Finish") {
+			$status = "Ended";
+			msg_log("Hey Finished");
+			go_play_next();
+		}
+
+		if ($status) {
+
+			# my ($temp) = int($c_offset / 4);
+			# $print = "$status|$current_id|$c_offset|$temp|$time";
+			# msg_log ($print);
+			# print $print ."\n";
+
+			# Update the sql for statistic when we reach the middle of the song
+			if ($c_offset > 200 and $statistic_flag == 1) {
+				$statistic_flag = 0;
+				$sql            =
+"UPDATE mp3main SET hits = hits +1  , lastdate = NOW() where id = $current_id";
+				$dbh->do($sql)
+				  or die "Can't prepare statement: $dbh->errstr\n";
+				msg_log("UPDATED STATS");
+			} ## end if ($c_offset > 200 and...
+
+		} ## end if ($status)
+
+	} ## end elsif (vec($rout, fileno(...
+
+	else {
+
+		# For all the socket .. 
+		for (my $sockcount = 0 ; $sockcount < scalar(@cnx) ; $sockcount++) {
+			$thesocket = $cnx[$sockcount]{'NS'};
+
+			if (vec($rout, fileno($thesocket), 1)) {
+				my $data = &readline($thesocket);
+
+				$last_cmd = $cnx[$sockcount]{'NS'};
+
+				# we found somethin one a socket .. 
+				if (!length($data)) {
+
+					# the thing we found is empty .. so Quit !! 
+					ns_log("Bye to client on socket $thesocket.");
+					close($thesocket) or ns_log("Pb with closing socket");
+					splice(@cnx, $sockcount, 1);
+				} ## end if (!length($data))
+
+				else {
+
+					# We got this from de client 
+					$data = substr($data, 0, length($data) - 2);
+					ns_log("Received from client $sockcount: [$data] ");
+
+					# Send it back to him !! 
+					print $thesocket &parse_input($data) . "\n";
+				} ## end else
+
+			} ## end if (vec($rout, fileno(...
+
+		}    # end of socket scrutation !!
+
+		if ($show_console) { &display_logued(); }
+
+	} ## end else
+
+}    # End of While !! OuF !!!
+

@@ -1,0 +1,82 @@
+#!/usr/bin/perl
+
+use Xmms;
+use Xmms::Remote;
+use Xmms::Config;
+
+my $remote = Xmms::Remote->new;
+my $config = Xmms::Config->new(Xmms::Config->file);
+
+my $Pid = 0;
+unless ($remote->is_running) {
+    exec "xmms" unless $Pid = fork;
+    sleep 1;
+}
+
+#!/usr/bin/perl
+
+system ("echo \@R XMMS\n");
+
+vec($rin,fileno(STDIN),1) = 1;
+use Fcntl;
+while (1) {
+	if ($nsel = select($rout=$rin, undef, undef, 1)) {
+		if (sysread(STDIN,$_,1)){
+			$_ = $_.<STDIN>;
+			chomp($_);
+			if (/^[Qq]/) {
+				$remote->quit;
+				system ("echo \@P 0\n");
+				exit 0;
+			} elsif (/^[Ss]/) {
+				$remote->stop;
+				system ("echo \@P 0\n");
+			} elsif (/^[Pp]/) {
+				if ($remote->is_playing) {
+					$remote->pause;
+					system ("echo \@P 1\n");
+				} else {
+					$remote->play;
+					system ("echo \@P 2\n");
+				}
+			} elsif (/^[Ll]/) {
+				($command,$file) = split (/ /, $_, 2);
+				$remote->playlist_clear;
+				@play[0]=$file;
+				$remote->playlist_add(\@play);
+				$remote->set_playlist_pos(0);
+				$remote->play;
+				$file =~ s/^.*\/(.*)\.mp3/$1/i;	
+				system ("echo \@I ".$file."\n");
+				system ("echo \@P 2\n");
+			} elsif (/^[Jj]/) {
+				($command, $time) = split (/ /,$_,2);
+				if ($time =~ /^+/) {
+					$pre="+";
+				} elsif ($time =~ /^-/) {
+					$pre="-";
+				}
+				$time = $time /30;
+				$remote->jump_to_time($time);
+			} elsif (/^[Vv]/) {
+				($command,$vol) = split (/ /,$_,2);
+				$remote->set_volume($vol);
+				system ("echo \@VOL ".$col."\n");
+			}
+			
+		}
+	}
+	if (($remote->is_playing) && (! $remote->is_paused)){
+		$frames = $remote->get_output_time;
+		$sec = $frames/1000;
+		$sec =~ s/\..*//g;
+		$left = $remote->get_playlist_time(0) - $frames;
+		$sleft = $left/1000;
+		$sleft =~ s/\..*//g;
+		system ("echo \@F $frames $left $sec $sleft\n");
+	}
+	if (!($remote->is_playing)) {
+		system ("echo \@P 3\n");
+	}
+	
+}
