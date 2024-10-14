@@ -1,0 +1,78 @@
+baseURL: /
+languageCode: en-AU
+title: Dual Elephants - Chris Debenhams homepage
+theme: mainroad
+timezone: Australia/Sydney
+enableRobotsTXT: true
+site_logo: /images/DE_Logo.png
+pagination:
+  pagerSize: 10
+taxonomies:
+  category: categories
+  tag: tags
+params:
+  description: Always keep a spare for redundancy
+  defaultTheme: auto
+  disableThemeToggle: false
+  showShareButtons: true
+  showReadingTime: true
+  showToc: true
+  showBreadCrumbs: true
+  showCodeCopyButtons: true
+  comments: true
+  hideFooter: false
+  opengraph: true
+  schema: true
+  toc: true
+  pager: true
+  readmore: true
+  logo:
+    image: /images/DE_Logo.png
+    title: false
+  style:
+    vars:
+      highlightColor: "#8888FF"
+  sidebar:
+    home: right
+    list: left
+    single: false
+    widgets:
+      - search
+      - taglist
+      - recent
+      - social
+  assets:
+    favicon: /favicon.ico
+    disableHLJS: true
+  widgets:
+    social:
+      github: cjd
+      facebook: chris.debenham
+      linkedin: chris.debenham
+      email: chris@adebenham.com
+      custom:
+        - title: Youtube
+          url: https://www.youtube.com/@ChrisDebenham1
+          icon: youtube.svg
+markup:
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    style: monokai
+  goldmark:
+    renderer:
+      unsafe: true
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+outputFormats:
+  RSS:
+    mediaType: application/rss+xml
+    baseName: feed
+menus:
+  main:
+    - name: Lyricue
+      url: https://lyricue.org
+      weight: 20
