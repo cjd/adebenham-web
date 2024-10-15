@@ -6,7 +6,7 @@ timezone: Australia/Sydney
 enableRobotsTXT: true
 site_logo: /images/DE_Logo.png
 pagination:
-  pagerSize: 10
+  pagerSize: 8
 taxonomies:
   category: categories
   tag: tags
