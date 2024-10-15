@@ -4,7 +4,7 @@ tags:
   - christmas-lights
 date: "2016-12-19T03:53:50+00:00"
 title: How I setup my lights - Arches, candy canes, small spiral trees and large spiral tree
-url: /blog/2016/12/19/how-i-setup-my-lights-arches-candy-canes-small-spiral-trees-and-large-spiral-tree/
+url: /blog/2016/12/how-i-setup-my-lights-arches-candy-canes-small-spiral-trees-and-large-spiral-tree/
 
 ---
 This is the third post in my series on how I setup my christmas lights
@@ -20,12 +20,12 @@ Links to rest of series:
 
 This post focuses on the arches along the front, the five candy canes and the small spiral trees
 
-{{< figure align=aligncenter width=300 src="/wp-content/uploads/2016/12/2016-12-07-190854%5FChristmas%5FLights-8-300x225.jpg" alt="" >}}
+{{< figure align=aligncenter width=300 src="/wp-content/uploads/2016/12/2016-12-07-190854%5FChristmas%5FLights-8.jpg" alt="" >}}
 
-{{< figure align=aligncenter width=300 src="/wp-content/uploads/2016/12/2016-12-19-130903%5FChristmas%5FLights-2-300x225.jpg" alt="" >}}
+{{< figure align=aligncenter width=300 src="/wp-content/uploads/2016/12/2016-12-19-130903%5FChristmas%5FLights-2.jpg" alt="" >}}
 
-{{< figure align=aligncenter width=300 src="/wp-content/uploads/2016/12/2016-12-07-190839%5FChristmas%5FLights-6-300x225.jpg" alt="" >}}
+{{< figure align=aligncenter width=300 src="/wp-content/uploads/2016/12/2016-12-07-190839%5FChristmas%5FLights-6.jpg" alt="" >}}
 
-{{< figure align=aligncenter width=300 src="/wp-content/uploads/2016/12/2016-12-07-190835%5FChristmas%5FLights-5-300x225.jpg" alt="" >}}
+{{< figure align=aligncenter width=300 src="/wp-content/uploads/2016/12/2016-12-07-190835%5FChristmas%5FLights-5.jpg" alt="" >}}
 
-{{< figure align=aligncenter width=300 src="/wp-content/uploads/2016/12/2016-12-07-190804%5FChristmas%5FLights-3-300x225.jpg" alt="" >}}
+{{< figure align=aligncenter width=300 src="/wp-content/uploads/2016/12/2016-12-07-190804%5FChristmas%5FLights-3.jpg" alt="" >}}
