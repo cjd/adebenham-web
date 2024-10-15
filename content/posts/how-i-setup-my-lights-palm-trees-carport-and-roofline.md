@@ -22,7 +22,11 @@ Links to rest of series:
 This post focuses on the palm trees, carport and roofline
 
 {{< figure align=aligncenter width=225 src="/wp-content/uploads/2016/12/2016-12-19-130926%5FChristmas%5FLights-4.jpg" alt="" >}}
+We have three large palm trees in the yard – the middle one supports the mega tree while on the two other I have attached two 5m strips (split into four 2.5m sections) to each tree.
 
 {{< figure align=aligncenter width=300 src="/wp-content/uploads/2016/12/2016-12-19-130937%5FChristmas%5FLights-5.jpg" alt="" >}}
+Along the guttering I have attached pixel strip. The strip is cable-tied to electrical conduit (to keep it straight) and the conduit connects to clips attached to the underside of the guttering.
 
 {{< figure align=aligncenter width=300 src="/wp-content/uploads/2016/12/2016-12-19-130850%5FChristmas%5FLights-1.jpg" alt="" >}}
+I the carport I have attached strips via cable-tie. One strip for each cross-member (four in total)
+

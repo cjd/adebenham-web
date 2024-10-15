@@ -13,7 +13,7 @@ It is called the [LeoStick](http://www.freetronics.com/products/leostick "LeoSti
 Seeing that it could pretend to be a USB HID device (ie keyboard/mouse) I wondered if I could do the sort of thing that the [USB Rubber Ducky](http://hakshop.myshopify.com/products/usb-rubber-ducky "Ducky Store") from Hak5 can do
 As it turns out the answer is YES :)
 
-Since it was possible I spent an hour or two writing a quick shell script which can convert ducky script payloads into a sketch suitable for uploading to the LeoStick (or any arduino that has USB-HID capability)Â Â  The end result is a small bash script which can be downloaded from [compile\_payload.sh](/files/leo/compile_payload.sh "Download script")
+Since it was possible I spent an hour or two writing a quick shell script which can convert ducky script payloads into a sketch suitable for uploading to the LeoStick (or any arduino that has USB-HID capability)     The end result is a small bash script which can be downloaded from [compile\_payload.sh](/files/leo/compile_payload.sh "Download script")
 
 Usage is fairly simple - you run the script with two options - the first being the payload file, and the second being the arduino script output.
 

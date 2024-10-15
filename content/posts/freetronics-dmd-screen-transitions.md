@@ -24,11 +24,11 @@ Source code below:
 
 ```
 /*---------------------------------------------------------------
-Â Includes
-Â ----------------------------------------------------------------*/
-#include <SPI.h>Â Â Â Â Â Â Â  //SPI.h must be included as DMD is written by SPI (the IDE complains otherwise)
-#include <DMD.h>Â Â Â Â Â Â Â  //
-#include <TimerOne.h>Â Â  //
+  Includes
+  ----------------------------------------------------------------*/
+#include <SPI.h>               //SPI.h must be included as DMD is written by SPI (the IDE complains otherwise)
+#include <DMD.h>               //
+#include <TimerOne.h>     //
 #include "Arial_black_16.h"
 //Fire up the DMD library as dmd
 DMD dmd(2,3,1);
@@ -42,223 +42,223 @@ int trans=0;
 int i=0;
 
 /*--------------------------------------------------------------------------------------
-Â Interrupt handler for Timer1 (TimerOne) driven DMD refresh scanning, this gets
-Â called at the period set in Timer1.initialize();
-Â --------------------------------------------------------------------------------------*/
+  Interrupt handler for Timer1 (TimerOne) driven DMD refresh scanning, this gets
+  called at the period set in Timer1.initialize();
+  --------------------------------------------------------------------------------------*/
 void ScanDMD()
 {
-Â  dmd.scanDisplayBySPI();
+   dmd.scanDisplayBySPI();
 }
 
 /*--------------------------------------------------------------------------------------
-Â setup
-Â Called by the Arduino architecture before the main loop begins
-Â --------------------------------------------------------------------------------------*/
+  setup
+  Called by the Arduino architecture before the main loop begins
+  --------------------------------------------------------------------------------------*/
 void setup(void)
 {
-Â  randomSeed(analogRead(0));
-Â  //initialize TimerOne's interrupt/CPU usage used to scan and refresh the display
-Â  Timer1.initialize( 5000 );Â Â Â Â Â Â Â Â Â Â  //period in microseconds to call ScanDMD. Anything longer than 5000 (5ms) and you can see flicker.
-Â  Timer1.attachInterrupt( ScanDMD );Â Â  //attach the Timer1 interrupt to ScanDMD which goes to dmd.scanDisplayBySPI()
-Â  //clear/init the DMD pixels held in RAM
-Â  dmd.clearScreen( 0 );Â Â  //true is normal (all pixels off), false is negative (all pixels on)
-Â  dmd.selectFont(Arial_Black_16);
-Â  dmd.setupBuffer(3);
+   randomSeed(analogRead(0));
+   //initialize TimerOne's interrupt/CPU usage used to scan and refresh the display
+   Timer1.initialize( 5000 );                     //period in microseconds to call ScanDMD. Anything longer than 5000 (5ms) and you can see flicker.
+   Timer1.attachInterrupt( ScanDMD );     //attach the Timer1 interrupt to ScanDMD which goes to dmd.scanDisplayBySPI()
+   //clear/init the DMD pixels held in RAM
+   dmd.clearScreen( 0 );     //true is normal (all pixels off), false is negative (all pixels on)
+   dmd.selectFont(Arial_Black_16);
+   dmd.setupBuffer(3);
 }
 
 /*--------------------------------------------------------------------------------------
-Â loop
-Â Arduino architecture main loop
-Â --------------------------------------------------------------------------------------*/
+  loop
+  Arduino architecture main loop
+  --------------------------------------------------------------------------------------*/
 void loop(void)
 {
-Â  lookaround();
-Â  dmd.setBufferEdit(0);
-Â  smile();
-Â  dmd.setBufferDisplay(0);
-Â  delay(1000);
-Â  wink();
-Â  delay(300);
-Â  dmd.copyBuffer(2,0);
-Â  dmd.setBufferEdit(0);
-Â  dmd.setBufferDisplay(0);
-Â  char stringa[]="Happy Birthday Lucas";
+   lookaround();
+   dmd.setBufferEdit(0);
+   smile();
+   dmd.setBufferDisplay(0);
+   delay(1000);
+   wink();
+   delay(300);
+   dmd.copyBuffer(2,0);
+   dmd.setBufferEdit(0);
+   dmd.setBufferDisplay(0);
+   char stringa[]="Happy Birthday Lucas";
 
-Â  dmd.drawMarquee(stringa,strlen(stringa),64,16,0xFF,0);
-Â  while (!dmd.stepMarquee(-1,0)){delay(30);}
+   dmd.drawMarquee(stringa,strlen(stringa),64,16,0xFF,0);
+   while (!dmd.stepMarquee(-1,0)){delay(30);}
 
-Â  dmd.setBufferEdit(1);
-Â  dmd.clearScreen(0);
-Â  dmd.drawString(8,0,"Happy",5,1,0);
-Â  dmd.drawString(0,16,"Birthday",8,1,0);
-Â  dmd.drawString(6,32,"Lucas!",6,1,0);
+   dmd.setBufferEdit(1);
+   dmd.clearScreen(0);
+   dmd.drawString(8,0,"Happy",5,1,0);
+   dmd.drawString(0,16,"Birthday",8,1,0);
+   dmd.drawString(6,32,"Lucas!",6,1,0);
 
-Â  dmd.copyBuffer(0,2);
-Â  dmd.setBufferDisplay(2); Â
-Â  transition(0,1);
-Â  delay(1000);
-Â
-Â  dmd.setBufferEdit(0);
-Â  smile();
-Â  transition(1,0);
-Â  delay(500);
-Â
-Â  dmd.setBufferEdit(1);
-Â  dmd.clearScreen(0);
-Â  dmd.drawString(8,0,"Lucas",5,1,0);
-Â  dmd.drawString(26,16,"is",2,1,0);
-Â  dmd.drawString(16,32,"One!",4,1,0);
-Â  dmd.copyBuffer(0,2);
-Â  dmd.setBufferDisplay(2);
+   dmd.copyBuffer(0,2);
+   dmd.setBufferDisplay(2);  
+   transition(0,1);
+   delay(1000);
+ 
+   dmd.setBufferEdit(0);
+   smile();
+   transition(1,0);
+   delay(500);
+ 
+   dmd.setBufferEdit(1);
+   dmd.clearScreen(0);
+   dmd.drawString(8,0,"Lucas",5,1,0);
+   dmd.drawString(26,16,"is",2,1,0);
+   dmd.drawString(16,32,"One!",4,1,0);
+   dmd.copyBuffer(0,2);
+   dmd.setBufferDisplay(2);
 
-Â  transition(0,1);
-Â  delay(1000);
+   transition(0,1);
+   delay(1000);
 
-Â  dmd.setBufferEdit(0);
-Â  dmd.clearScreen(0);
-Â  dmd.drawString(16,0,"Born",4,1,0);
-Â  dmd.drawString(0,16,"28 April",8,1,0);
-Â  dmd.drawString(16,32,"2011",4,1,0);
+   dmd.setBufferEdit(0);
+   dmd.clearScreen(0);
+   dmd.drawString(16,0,"Born",4,1,0);
+   dmd.drawString(0,16,"28 April",8,1,0);
+   dmd.drawString(16,32,"2011",4,1,0);
 
-Â  transition(1,0);
-Â  delay(1000);
-Â
-Â  dmd.copyBuffer(1,0);
+   transition(1,0);
+   delay(1000);
+ 
+   dmd.copyBuffer(1,0);
 }
 
 void transition(byte from, byte to)
 {
-Â  int i=0;
-Â  trans=random(8);
-Â  dmd.copyBuffer(from,2);
-Â  while (dmd.transition(from,to,2,trans,i)) {i=i+1;}
+   int i=0;
+   trans=random(8);
+   dmd.copyBuffer(from,2);
+   while (dmd.transition(from,to,2,trans,i)) {i=i+1;}
 }
 
 void wink()
 {
-Â  dmd.setBufferEdit(0);
-Â  dmd.clearScreen(0);
-Â  dmd.setBufferDisplay(2); Â
-Â  head();
-Â  eyes();
-Â  mouth_smile();
-Â  dmd.drawFilledBox(centreX-8,centreY-7,centreX-6,centreY-5,1);
-Â  dmd.copyBuffer(0,2);
+   dmd.setBufferEdit(0);
+   dmd.clearScreen(0);
+   dmd.setBufferDisplay(2);  
+   head();
+   eyes();
+   mouth_smile();
+   dmd.drawFilledBox(centreX-8,centreY-7,centreX-6,centreY-5,1);
+   dmd.copyBuffer(0,2);
 
-Â  int winkspeed=100; Â
+   int winkspeed=100;  
 
-Â  dmd.setBufferEdit(1);
-Â  for (int i=0;i<=8;i++) {
-Â Â Â  dmd.copyBuffer(0,1);
-Â Â Â  if (i<=4) {
-Â Â Â Â Â  dmd.drawFilledBox(centreX+6,centreY-7,centreX+8,centreY-5,1);
-Â Â Â  } else if(i==5) {
-Â Â Â Â Â  dmd.drawFilledBox(centreX+6,centreY-6,centreX+8,centreY-5,1);
-Â Â Â  }
-Â Â Â  int width=0;
-Â Â Â  if (i==0 || i==8) {
-Â Â Â Â Â  dmd.drawLine(centreX+7-1,centreY-11+i,centreX+7+1,centreY-11+i,1);
-Â Â Â  } else if(i<=2 || i>=6) {
-Â Â Â Â Â  dmd.drawLine(centreX+7-3,centreY-11+i,centreX+7+3,centreY-11+i,1);
-Â Â Â  } else {
-Â Â Â Â Â  dmd.drawLine(centreX+7-4,centreY-11+i,centreX+7+4,centreY-11+i,1);
-Â Â Â  }
-Â Â Â  dmd.copyBuffer(1,2);
-Â Â Â  delay(50);
-Â  }
-Â  for (int i=8;i>=0;i--) {
-Â Â Â  dmd.copyBuffer(0,1);
-Â Â Â  if (i<=4) {
-Â Â Â Â Â  dmd.drawFilledBox(centreX+6,centreY-7,centreX+8,centreY-5,1);
-Â Â Â  } else if(i==5) {
-Â Â Â Â Â  dmd.drawFilledBox(centreX+6,centreY-6,centreX+8,centreY-5,1);
-Â Â Â  }
-Â Â Â  int width=0;
-Â Â Â  if (i==0 || i==8) {
-Â Â Â Â Â  dmd.drawLine(centreX+7-1,centreY-11+i,centreX+7+1,centreY-11+i,1);
-Â Â Â  } else if(i<=2 || i>=6) {
-Â Â Â Â Â  dmd.drawLine(centreX+7-3,centreY-11+i,centreX+7+3,centreY-11+i,1);
-Â Â Â  } else {
-Â Â Â Â Â  dmd.drawLine(centreX+7-4,centreY-11+i,centreX+7+4,centreY-11+i,1);
-Â Â Â  }
-Â Â Â  dmd.copyBuffer(1,2);
-Â Â Â  delay(50);
-Â  }
-Â  dmd.setBufferEdit(2);
+   dmd.setBufferEdit(1);
+   for (int i=0;i<=8;i++) {
+       dmd.copyBuffer(0,1);
+       if (i<=4) {
+           dmd.drawFilledBox(centreX+6,centreY-7,centreX+8,centreY-5,1);
+       } else if(i==5) {
+           dmd.drawFilledBox(centreX+6,centreY-6,centreX+8,centreY-5,1);
+       }
+       int width=0;
+       if (i==0 || i==8) {
+           dmd.drawLine(centreX+7-1,centreY-11+i,centreX+7+1,centreY-11+i,1);
+       } else if(i<=2 || i>=6) {
+           dmd.drawLine(centreX+7-3,centreY-11+i,centreX+7+3,centreY-11+i,1);
+       } else {
+           dmd.drawLine(centreX+7-4,centreY-11+i,centreX+7+4,centreY-11+i,1);
+       }
+       dmd.copyBuffer(1,2);
+       delay(50);
+   }
+   for (int i=8;i>=0;i--) {
+       dmd.copyBuffer(0,1);
+       if (i<=4) {
+           dmd.drawFilledBox(centreX+6,centreY-7,centreX+8,centreY-5,1);
+       } else if(i==5) {
+           dmd.drawFilledBox(centreX+6,centreY-6,centreX+8,centreY-5,1);
+       }
+       int width=0;
+       if (i==0 || i==8) {
+           dmd.drawLine(centreX+7-1,centreY-11+i,centreX+7+1,centreY-11+i,1);
+       } else if(i<=2 || i>=6) {
+           dmd.drawLine(centreX+7-3,centreY-11+i,centreX+7+3,centreY-11+i,1);
+       } else {
+           dmd.drawLine(centreX+7-4,centreY-11+i,centreX+7+4,centreY-11+i,1);
+       }
+       dmd.copyBuffer(1,2);
+       delay(50);
+   }
+   dmd.setBufferEdit(2);
 }
 
 void lookaround()
 {
-Â  //head
-Â  dmd.setBufferEdit(0);
-Â  dmd.clearScreen(0);
-Â  dmd.setBufferDisplay(2); Â
-Â  head();
-Â  eyes();
-Â  mouth_flat();
-Â  dmd.copyBuffer(0,2);
-Â
-Â  // eyelids
-Â  dmd.drawLine(centreX-5,centreY-10,centreX-10,centreY-10,1);
-Â  dmd.drawLine(centreX+5,centreY-10,centreX+10,centreY-10,1);
+   //head
+   dmd.setBufferEdit(0);
+   dmd.clearScreen(0);
+   dmd.setBufferDisplay(2);  
+   head();
+   eyes();
+   mouth_flat();
+   dmd.copyBuffer(0,2);
+ 
+   // eyelids
+   dmd.drawLine(centreX-5,centreY-10,centreX-10,centreY-10,1);
+   dmd.drawLine(centreX+5,centreY-10,centreX+10,centreY-10,1);
 
-Â  dmd.setBufferEdit(1);
-Â  for (int i=0;i<=2;i++) {
-Â Â Â  dmd.copyBuffer(0,1);
-Â Â Â  dmd.drawFilledBox(centreX-8+i,centreY-7,centreX-6+i,centreY-5,1);
-Â Â Â  dmd.drawFilledBox(centreX+6+i,centreY-7,centreX+8+i,centreY-5,1);
-Â Â Â  dmd.copyBuffer(1,2);
-Â Â Â  delay(100);
-Â  }
-Â  for (int i=2;i>=-2;i--) {
-Â Â Â  dmd.copyBuffer(0,1);
-Â Â Â  dmd.drawFilledBox(centreX-8+i,centreY-7,centreX-6+i,centreY-5,1);
-Â Â Â  dmd.drawFilledBox(centreX+6+i,centreY-7,centreX+8+i,centreY-5,1);
-Â Â Â  dmd.copyBuffer(1,2);
-Â Â Â  delay(100);
-Â  }
-Â  for (int i=-2;i<=0;i++) {
-Â Â Â  dmd.copyBuffer(0,1);
-Â Â Â  dmd.drawFilledBox(centreX-8+i,centreY-7,centreX-6+i,centreY-5,1);
-Â Â Â  dmd.drawFilledBox(centreX+6+i,centreY-7,centreX+8+i,centreY-5,1);
-Â Â Â  dmd.copyBuffer(1,2);
-Â Â Â  delay(100);
-Â  }
-Â  dmd.setBufferEdit(2);
+   dmd.setBufferEdit(1);
+   for (int i=0;i<=2;i++) {
+       dmd.copyBuffer(0,1);
+       dmd.drawFilledBox(centreX-8+i,centreY-7,centreX-6+i,centreY-5,1);
+       dmd.drawFilledBox(centreX+6+i,centreY-7,centreX+8+i,centreY-5,1);
+       dmd.copyBuffer(1,2);
+       delay(100);
+   }
+   for (int i=2;i>=-2;i--) {
+       dmd.copyBuffer(0,1);
+       dmd.drawFilledBox(centreX-8+i,centreY-7,centreX-6+i,centreY-5,1);
+       dmd.drawFilledBox(centreX+6+i,centreY-7,centreX+8+i,centreY-5,1);
+       dmd.copyBuffer(1,2);
+       delay(100);
+   }
+   for (int i=-2;i<=0;i++) {
+       dmd.copyBuffer(0,1);
+       dmd.drawFilledBox(centreX-8+i,centreY-7,centreX-6+i,centreY-5,1);
+       dmd.drawFilledBox(centreX+6+i,centreY-7,centreX+8+i,centreY-5,1);
+       dmd.copyBuffer(1,2);
+       delay(100);
+   }
+   dmd.setBufferEdit(2);
 }
 
 void smile()
 {
-Â  dmd.clearScreen(0);
-Â  head();
-Â  eyes();
-Â  mouth_smile();
-Â  dmd.drawFilledBox(centreX-8,centreY-7,centreX-6,centreY-5,1);
-Â  dmd.drawFilledBox(centreX+6,centreY-7,centreX+8,centreY-5,1);
+   dmd.clearScreen(0);
+   head();
+   eyes();
+   mouth_smile();
+   dmd.drawFilledBox(centreX-8,centreY-7,centreX-6,centreY-5,1);
+   dmd.drawFilledBox(centreX+6,centreY-7,centreX+8,centreY-5,1);
 }
 
 void head()
 {
-Â  dmd.drawCircle(centreX,centreY,20,1);
+   dmd.drawCircle(centreX,centreY,20,1);
 }
 
 void eyes()
 {
-Â  dmd.drawCircle(centreX-7,centreY-7,5,1);
-Â  dmd.drawCircle(centreX+7,centreY-7,5,1);
+   dmd.drawCircle(centreX-7,centreY-7,5,1);
+   dmd.drawCircle(centreX+7,centreY-7,5,1);
 }
 
 void mouth_flat()
 {
-Â  dmd.drawLine(centreX-12,centreY+8,centreX+12,centreY+8,1);
+   dmd.drawLine(centreX-12,centreY+8,centreX+12,centreY+8,1);
 }
 
 void mouth_smile()
 {
-Â  dmd.drawLine(centreX-12,centreY+6,centreX-4,centreY+11,1);
-Â  dmd.drawLine(centreX-4,centreY+11,centreX,centreY+11,1);
-Â  dmd.drawLine(centreX+4,centreY+11,centreX,centreY+11,1);
-Â  dmd.drawLine(centreX+12,centreY+6,centreX+4,centreY+11,1);
+   dmd.drawLine(centreX-12,centreY+6,centreX-4,centreY+11,1);
+   dmd.drawLine(centreX-4,centreY+11,centreX,centreY+11,1);
+   dmd.drawLine(centreX+4,centreY+11,centreX,centreY+11,1);
+   dmd.drawLine(centreX+12,centreY+6,centreX+4,centreY+11,1);
 }
 
 ```

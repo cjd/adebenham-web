@@ -16,7 +16,7 @@ Being that I am not musically talented in any way I figured the best way to do t
 
 To help with this I wrote a converter that would take a MusicXML file and output an include file.
 
-It simply reads the XML and outputs an array where each note is stored in two uint16 values - the first is the note name as a defined in pitches.h (ie NOTE\_C4), the second is the duration in milliseconds.Â  The entire array is stored in PROGMEM so as to not use up too much ram on the AVR.
+It simply reads the XML and outputs an array where each note is stored in two uint16 values - the first is the note name as a defined in pitches.h (ie NOTE\_C4), the second is the duration in milliseconds.   The entire array is stored in PROGMEM so as to not use up too much ram on the AVR.
 
 The script is as follows (or download from [here](/files/arduino/convert_xml.pl))
 
@@ -71,7 +71,7 @@ close OUT;
 
 To actually use this generated include file I created a function 'playMelody' which is called regularly during the running of a sketch.
 
-Each time it runs it checks if it is time to play the next note, if so then it reads the next note from the array,calls 'tone' to play it and then sets a variable to say when the next note should be played.Â  If it is not yet time to play the next note then it quickly returns (there is not much latency added by calling the function so it's okay to call too often)
+Each time it runs it checks if it is time to play the next note, if so then it reads the next note from the array,calls 'tone' to play it and then sets a variable to say when the next note should be played.   If it is not yet time to play the next note then it quickly returns (there is not much latency added by calling the function so it's okay to call too often)
 
 ``` perl
 boolean playMelody()
@@ -85,7 +85,7 @@ boolean playMelody()
       tuneStep=0;
     }
     toneVal=pgm_read_word_near(SmoothCriminalTune+(tuneStep*2));
-    durationÂ =Â pgm_read_word_near(SmoothCriminalTune+(tuneStep*2)+1);
+    duration  =  pgm_read_word_near(SmoothCriminalTune+(tuneStep*2)+1);
     tuneStep++;
     if (toneVal) tone(speakerPin,toneVal,duration*2);
     time=millis()+(duration*2)+5;

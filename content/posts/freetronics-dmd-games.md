@@ -18,7 +18,7 @@ See this diagram for how it is laid out (for 2x2 case)
 
 ![](/arduino/multi-DMD.svg)
 
-Playing is fairly straight-forward.Â  Only thing to remember is that the 'z-button' on the nunchuck is used to select and the 'c-button' is used to exit back to the menu
+Playing is fairly straight-forward.   Only thing to remember is that the 'z-button' on the nunchuck is used to select and the 'c-button' is used to exit back to the menu
 
 Have a look at the video below to see them in action.
 \[youtube\_sc url="5WW9ZmvjSA4"\]

@@ -16,9 +16,9 @@ It has 24x25 White LEDs with a row of 25 Red LEDs across the bottom.
 
 By having that bottom row a different colour I can use that section for displaying score or other information
 
-The first application I wrote for it the good old game of 'Snake'.Â  After writing a quick version of the game I realised it needed a bit more 'flair' and so added the ability to display an intro screen and score screen.Â  To make this easier I wrote a bunch of utility functions to display characters that are stored in an array. I'll describe how this works in a separate post as \[intlink id="15" type="post"\]Peggy 2 Character display\[/intlink\].
+The first application I wrote for it the good old game of 'Snake'.   After writing a quick version of the game I realised it needed a bit more 'flair' and so added the ability to display an intro screen and score screen.   To make this easier I wrote a bunch of utility functions to display characters that are stored in an array. I'll describe how this works in a separate post as \[intlink id="15" type="post"\]Peggy 2 Character display\[/intlink\].
 
-The game has multiple levels (where walls are put up in different spots and the speed is increased).Â  All up the program takes up 5258 bytes so fits on an atmega168 with room to spare.
+The game has multiple levels (where walls are put up in different spots and the speed is increased).   All up the program takes up 5258 bytes so fits on an atmega168 with room to spare.
 
 Source code is available as [peggy2\_snake.zip](/files/arduino/peggy2_snake.zip)
 

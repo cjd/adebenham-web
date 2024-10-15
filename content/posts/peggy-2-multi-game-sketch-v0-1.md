@@ -20,7 +20,7 @@ When compiled it takes up 11432 bytes (it includes the 'Tone' library as I have 
 
  [![Game menu](/wp-content/uploads/2010/02/game_menu.jpg)](/wp-content/uploads/2010/02/game_menu.jpg)
 
-When you turn on the peggy2 a menu is presented displaying the available games - you can select from them using the up/down buttons and select with the 'select' or 'any' button on the left of the peggy2.Â  Only three game names fit on the screen at once so the entire display scrolls up/down when changing game (and highlights the current selection)Â  To change games press the reset button.
+When you turn on the peggy2 a menu is presented displaying the available games - you can select from them using the up/down buttons and select with the 'select' or 'any' button on the left of the peggy2.   Only three game names fit on the screen at once so the entire display scrolls up/down when changing game (and highlights the current selection)   To change games press the reset button.
 
 ## Playing the games
 
@@ -28,7 +28,7 @@ When you turn on the peggy2 a menu is presented displaying the available games -
 
 [![Snake](/wp-content/uploads/2010/02/snake.jpg)](/wp-content/uploads/2010/02/snake.jpg)[![Level select](/wp-content/uploads/2010/02/level_select.jpg)](/wp-content/uploads/2010/02/level_select.jpg)
 
-When the game first starts you can choose which level to start at.Â  There are four different boards available - these boards are re-used in a loop just at a higher speed for later levels.
+When the game first starts you can choose which level to start at.   There are four different boards available - these boards are re-used in a loop just at a higher speed for later levels.
 
 Eat the 'apples' to get points, don't hit yourself or walls
 
@@ -56,7 +56,7 @@ Left/right buttons control movement of the paddle
 
  [![Race game](/wp-content/uploads/2010/02/race.jpg)](/wp-content/uploads/2010/02/race.jpg)
 
-Avoid the walls.Â  One point every 25 blocks driven past, walls get narrower every 25 points
+Avoid the walls.   One point every 25 blocks driven past, walls get narrower every 25 points
 
 Left/right buttons control movement of the car.
 

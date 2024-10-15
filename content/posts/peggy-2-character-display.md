@@ -8,7 +8,7 @@ title: Peggy 2 Character display
 url: /blog/2010/01/30/peggy-2-character-display/
 
 ---
-As mentioned in theÂ \[intlink id="13" type="post"\]Peggy 2 Snake\[/intlink\] post I wrote a bunch of small utility functions to display a string on the peggy 2.
+As mentioned in the  \[intlink id="13" type="post"\]Peggy 2 Snake\[/intlink\] post I wrote a bunch of small utility functions to display a string on the peggy 2.
 
 Each character is stored as a 24-bit number (held in a 32bit uint32) where each 4 bits indicates the on/off status for a row of 4 pixels. This results in allowing for a 4x6 pixel character
 
