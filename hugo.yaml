@@ -60,6 +60,9 @@ params:
   post_meta:
     - date
     - tag
+  thumbnail:
+    visibility:
+      - list
 markup:
   highlight:
     codeFences: true
