@@ -1,3 +1,4 @@
+publishDir: /home/cjd/Sync/Website/adebenham/
 baseURL: /
 languageCode: en-AU
 title: Dual Elephants - Chris Debenhams homepage
