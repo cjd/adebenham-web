@@ -54,6 +54,12 @@ params:
         - title: Youtube
           url: https://www.youtube.com/@ChrisDebenham1
           icon: youtube.svg
+    search:
+      url: /search/
+      name: q
+  post_meta:
+    - date
+    - tag
 markup:
   highlight:
     codeFences: true
