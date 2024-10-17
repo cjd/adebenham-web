@@ -55,6 +55,9 @@ params:
         - title: Youtube
           url: https://www.youtube.com/@ChrisDebenham1
           icon: youtube.svg
+        - title: RSS Feed
+          url: /feed.xml
+          icon: rss.svg
     search:
       url: /search/
       name: q
