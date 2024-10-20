@@ -39,9 +39,9 @@ params:
     single: false
     widgets:
       - search
+      - social
       - taglist
       - recent
-      - social
   assets:
     favicon: /favicon.ico
     disableHLJS: true
