@@ -4,12 +4,14 @@ date: "2010-02-04T01:04:36+00:00"
 title: Gournal
 url: /old-stuff/gournal/
 summary: Gournal is a note-taking application written for usage on Tablet-PCs
-thumbnail: /images/gournal.png
+thumbnail: /old-stuff/gournal/gournal.png
 
 ---
-![Gournal Logo](/files/gournal/gournal.png)
+![Gournal Logo](gournal.png)
 
 # Gournal - A Note-taking Tablet Application for Linux
+
+[![screenshot](gournal-small.jpg)](gournal-large.png)
 
 ## Overview
 
@@ -51,4 +53,4 @@ A Debian package is available from my repository. Add ```deb http://staging.adeb
 
 Gournal was written by Chris Debenham [<chris@adebenham.com>](mailto:chris@adebenham.com)
 It was inspired by [Jarnal](http://www.dklevine.com/general/software/tc1000/jarnal.htm) which is a journal application written in Java by David K. Levine
-Gournal would not be possible without the hard work of the [gtk2-perl](http://gtk2-perl.sourceforge.net/) hackers[![screenshot](/files/gournal/gournal-small.jpg)](/files/gournal/gournal-large.png)
+Gournal would not be possible without the hard work of the [gtk2-perl](http://gtk2-perl.sourceforge.net/) hackers

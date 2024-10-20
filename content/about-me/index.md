@@ -9,7 +9,7 @@ menu:
     name: About Me
     weight: 2
 ---
-[![Hacker logo](/images/glider-small.png)](http://catb.org/hacker-emblem/)
+[![Hacker logo](glider-small.png)](http://catb.org/hacker-emblem/)
 
 I live in Gosford, NSW, Australia which is about 75km north of Sydney Australia (you know, that place with the bridge and funky shaped opera house).
 
@@ -37,4 +37,4 @@ tv+ b+ G++ D++ e++ h---- r+++
 _If you don't know what the above means, it isn't for you_!
 ```
 
-![Lego version of Chris](/images/lego.png)
+![Lego version of Chris](lego.png)
