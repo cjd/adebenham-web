@@ -2,7 +2,6 @@
 author: cjd
 title: Moved to Hugo
 date: "2024-10-21T19:06:46+11:00"
-draft: true
 tags:
   - general
 url: /blog/2020/10/moved-to-hugo
