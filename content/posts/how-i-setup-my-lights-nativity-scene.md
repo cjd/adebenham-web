@@ -21,14 +21,14 @@ Links to rest of series:
 
 This post focuses on the Nativity scene at the side of the yard.
 
-{{< figure align=aligncenter width=300 src="/wp-content/uploads/2016/12/2016-12-07-190849%5FChristmas%5FLights-7.jpg" alt="" >}}
+{{< figure align=aligncenter width=300 src="/posts/media/lights/2016-12-07-190849%5FChristmas%5FLights-7.jpg" alt="" >}}
 This is the finished nativity scene. The stable is made from two lengths of wood cut and painted accordingly. The cutouts (Angel, Mary, Joseph, Jesus and two dinosaurs) are all made from marine-ply painted white.
 
 
-{{< figure align=aligncenter width=300 src="/wp-content/uploads/2016/12/2016-09-21-203105%5FChristmas%5FLights-1.jpg" alt="" >}}
+{{< figure align=aligncenter width=300 src="/posts/media/lights/2016-09-21-203105%5FChristmas%5FLights-1.jpg" alt="" >}}
 Here is a close-up of two of the cutouts – an Apatosaurus and a Triceratops (chosen by my five year old and three year old receptively. They were made by drawing out the shape on a piece of marine-ply, cutting out with a jigsaw and then painting white.
 
 
-{{< figure align=aligncenter width=300 src="/wp-content/uploads/2016/12/2016-12-19-130919%5FChristmas%5FLights-3.jpg" alt="" >}}
+{{< figure align=aligncenter width=300 src="/posts/media/lights/2016-12-19-130919%5FChristmas%5FLights-3.jpg" alt="" >}}
 To light the nativity scene I bought a cheap worklight and replaced the innards with three 12V pixel modules.
 

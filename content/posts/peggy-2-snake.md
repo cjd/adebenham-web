@@ -10,7 +10,7 @@ url: /blog/2010/01/30/peggy-2-snake/
 ---
 For Christmas my wife gave me a [peggy 2](http://evilmadscience.com/tinykitlist/75) and I finally got around to building it.
 
-\[caption id="attachment\_14" align="aligncenter" width="199" caption="Peggy 2 running Snake"\] [![Peggy 2 running Snake](/wp-content/uploads/2010/01/Peggy2_snake-199x300.jpg)](/wp-content/uploads/2010/01/Peggy2_snake.jpg)\[/caption\]
+\[caption id="attachment\_14" align="aligncenter" width="199" caption="Peggy 2 running Snake"\] [![Peggy 2 running Snake](/posts/media/peggy/Peggy2_snake-199x300.jpg)](/posts/media/peggy/Peggy2_snake.jpg)\[/caption\]
 
 It has 24x25 White LEDs with a row of 25 Red LEDs across the bottom.
 

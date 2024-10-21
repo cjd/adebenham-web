@@ -18,7 +18,7 @@ It is my sons first birthday in a few days so I thought it nice to create a movi
 \[youtube\_sc url="s4Qjski-WMY"\]
 
 For the hardware I mounted the displays on a wooden frame (hold on by hot-glue) and then routed power down each side and signal was daisy-chained from bottom-right (bottom-left in photo) to each display.
-[![](/wp-content/uploads/2012/04/DMD_Display_layout-1024x768.jpg)](/wp-content/uploads/2012/04/DMD_Display_layout.jpg)
+[![](/posts/media/DMD_Display_layout.jpg)](/posts/media/DMD_Display_layout.jpg)
 
 Source code below:
 

@@ -33,10 +33,10 @@ Here are videos of my lights this year.
 
 For those that are interested this is all controlled by a Sandevices E682 and Advatek Pixlite4 sitting in a large plastic tub.
 
-[![IMG_20151127_140104](/wp-content/uploads/2015/12/IMG_20151127_140104.jpg)](/wp-content/uploads/2015/12/IMG_20151127_140104.jpg)
+[![IMG_20151127_140104](/posts/media/lights/IMG_20151127_140104.jpg)](/posts/media/lights/IMG_20151127_140104.jpg)
 
 All the sequences were created in [xLights](http://www.nutcracker123.com/wk/index.php?title=Main_Page) running on Linux - and the show is controlled by [FPP](http://falconchristmas.com/wiki/Falcon_FPP) running on a Raspberry Pi
 
 If anyone is interested in the sequences used here is a zip file containing all the sequences and my xlights\_rgbeffects.xml file
 
-[2015\_Sequences](/wp-content/uploads/2015/12/2015_Sequences.zip)
+[2015\_Sequences](/posts/media/lights/2015_Sequences.zip)

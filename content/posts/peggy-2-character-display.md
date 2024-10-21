@@ -14,7 +14,7 @@ Each character is stored as a 24-bit number (held in a 32bit uint32) where each 
 
 For example the character for the number '0' is stored as 0x699996 which when spread out looks like:
 
-```
+``` binary
 0110
 1001
 1001
@@ -28,7 +28,7 @@ To save RAM I put this in program memory using: PROGMEM prog\_uint32\_t chars\[3
 
 To write a character to the display I use a function "show\_char" (note I use a special function 'setPixel' to set the individual pixels to a certain brightness level - but if you are not using grayscale then the call can be replaced by standard frame.SetPixel calls)
 
-```
+``` arduino
 void show_char(char Character, byte x, byte y)
 {
   byte charNum = 36;
@@ -55,7 +55,7 @@ void show_char(char Character, byte x, byte y)
 
 To make things a bit easier to display a string I also created a quick wrapper function 'write\_string'
 
-```
+``` arduino
 void write_string(char string[], byte x, byte y)
 {
   byte i=0;

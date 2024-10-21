@@ -11,7 +11,7 @@ Now that I have xLights being built fine within docker (see [Automatic testing 
 
 It is being built based on Ubuntu Trusty and has been tested to work on Ubuntu 16.04, 16.10, Fedora 25 and OpenSuse 42.2 (and should hopefully work pretty much anywhere else as well)
 
-The creation of the AppImage is done by the [Recipe.appimage](/wp-content/uploads/xlights/build/Recipe.appimage) file that I included in the docker image.  This means that building of the appimage is simply:
+The creation of the AppImage is done by the [Recipe.appimage](https://github.com/xLightsSequencer/xlights-build-docker/blob/master/Recipe.appimage) file that I included in the docker image.  This means that building of the appimage is simply:
 
 ```
 $ docker pull debenham/xlights

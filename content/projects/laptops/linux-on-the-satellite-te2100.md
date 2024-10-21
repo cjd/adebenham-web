@@ -4,6 +4,7 @@ date: "2010-02-04T01:28:15+00:00"
 title: Linux on the Satellite TE2100
 summary: Details on getting Linux working on a TE2100
 url: /laptop/linux-on-the-toshiba-satellite-te2100/
+thumbnail: /projects/laptops/te2100.jpg
 
 ---
 # Linux on the Toshiba Satellite TE2100
@@ -11,8 +12,6 @@ url: /laptop/linux-on-the-toshiba-satellite-te2100/
 ## Preface
 
 This is a survey about Linux related hardware features of the Toshiba Satellite TE2100.
-
-[Chris Debenham](mailto:chris@adebenham.com) <chris@adebenham.com>
 
 ## Installation
 

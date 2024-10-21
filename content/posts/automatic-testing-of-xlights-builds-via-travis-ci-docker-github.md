@@ -21,7 +21,7 @@ Setting this up was a bit more complicated than just turning on builds in travis
 
 By default the build environment on travis-ci is Ubuntu trusty (which is the Ubuntu I want to use as it is the oldest LTS still supported and so useful for AppImage builds) - but sadly that doesn't have new enough libraries (in particular the ffmpeg libraries) and also the build toolchain is too old (need C++14 support which is only in the newer gcc).  Adding these dynamically every build was not practical.  As such I had to build a custom docker image which was pre-configured with the necessary libraries/tools etc.  Doing it this way also meant that I could provide a pre-compiled wxwidgets as part of the image rather than having to rebuild it every time (this saves substantial time).
 
-To build the Docker image I had to create a suitable ' [Dockerfile](/wp-content/uploads/xlights/build/Dockerfile)' which describes the build of the image.  This dockerfile was as follows:
+To build the Docker image I had to create a suitable ' [Dockerfile](https://github.com/xLightsSequencer/xlights-build-docker/blob/master/Dockerfile)' which describes the build of the image.  This dockerfile was as follows:
 
 ```
 FROM ubuntu:14.04
@@ -42,9 +42,9 @@ It adds four files, the first being a quick pre-built cbp2make (since that is no
 
 The next three are Recipe files.
 
-- [Recipe.deps](/wp-content/uploads/xlights/build/Recipe.deps) just sets up the image by installing dependencies and pre-building wxWidgets.
-- [Recipe](/wp-content/uploads/xlights/build/Recipe) clones the source of xLights from GitHub and then builds it.
-- Recipe.appimage takes the built xLights and packages it up as an [AppImage](https://appimage.org/) binary.
+- [Recipe.deps](https://github.com/xLightsSequencer/xlights-build-docker/blob/master/Recipe.deps) just sets up the image by installing dependencies and pre-building wxWidgets.
+- [Recipe](https://github.com/xLightsSequencer/xlights-build-docker/blob/master/Recipe) clones the source of xLights from GitHub and then builds it.
+- [Recipe.appimage](https://github.com/xLightsSequencer/xlights-build-docker/blob/master/Recipe.appimage) takes the built xLights and packages it up as an [AppImage](https://appimage.org/) binary.
 
 Then it only runs the Recipe.deps - this way the docker image is ready to build and we don't waste time rebuilding things that don't change.
 

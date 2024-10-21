@@ -4,6 +4,7 @@ date: "2010-02-04T01:24:46+00:00"
 title: Linux on the Portege M200
 url: /laptop/toshiba-portege-m200/
 summary: Details on getting Linux working on an M200
+thumbnail: /projects/laptops/m200.jpg
 
 ---
 # Debian Linux on the Toshiba Portege M200
