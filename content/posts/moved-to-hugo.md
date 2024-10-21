@@ -19,5 +19,5 @@ After looking at some of the various static-site generator options I settled on 
 * The fifth is that it is themeable in a reproducible way
 * Finally I really appreciate that the way it works fits nicely into version control (so I can put it all in git)
 
-The end result is a nicely organised and tracked website which can be found in [GitHub](https://github.com/cjd/adebenham-web]. The entire site is tracked in there with change logging etc meaning I can quickly rebuild if needed.
-I am using the theme [Mainroad](https://github.com/Vimux/Mainroad) and to enable searching it is using (Pagefind)[https://pagefind.io]. The only modification needed to the theme was to add 'data-pagefind-body' to [single.html](https://github.com/cjd/adebenham-web/blob/main/layouts/_default/single.html) so that only the standalone pages would be indexed (not the list pages).
+The end result is a nicely organised and tracked website which can be found in [GitHub](https://github.com/cjd/adebenham-web). The entire site is tracked in there with change logging etc meaning I can quickly rebuild if needed.
+I am using the theme [Mainroad](https://github.com/Vimux/Mainroad) and to enable searching it is using [Pagefind](https://pagefind.io). The only modification needed to the theme was to add 'data-pagefind-body' to [single.html](https://github.com/cjd/adebenham-web/blob/main/layouts/_default/single.html) so that only the standalone pages would be indexed (not the list pages).
