@@ -11,4 +11,5 @@ sidebar: false
 thumbnail:
   visibility:
     - list
+layout: boxlist
 ---

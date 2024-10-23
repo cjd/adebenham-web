@@ -1,0 +1,12 @@
+<article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+      <center>
+			<a href="{{ .RelPermalink }}" rel="bookmark">
+      <img class="thumbnail__image" src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}" width=200px><br>
+      {{ .Title }}<br>
+			</a>
+      </center>
+		</h2>
+	</header>
+</article>
