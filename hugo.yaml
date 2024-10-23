@@ -79,6 +79,12 @@ outputs:
   home:
     - HTML
     - RSS
+  section:
+    - HTML
+  taxonomy:
+    - HTML
+  term:
+    - HTML
 outputFormats:
   RSS:
     mediaType: application/rss+xml
