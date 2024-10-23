@@ -4,7 +4,7 @@ date: "2010-02-04T01:24:46+00:00"
 title: Linux on the Vega Tablet
 url: /laptop/vega/
 summary: Details on getting Linux working on a Vega tablet
-thumbnail: /vega/thumbnail/TN-2011-03-31_15-35-49_788.jpg
+thumbnail: /files/vega/thumbnail/TN-2011-03-31_15-35-49_788.jpg
 
 ---
 # Ubuntu Linux on the Vega
@@ -18,14 +18,14 @@ Install is via nandroid.sh
 
 ## Installation
 
-![ubuntu-screenshot.jpg](/vega/ubuntu-screenshot.jpg)
+![ubuntu-screenshot.jpg](/files/vega/ubuntu-screenshot.jpg)
 
 # Files
 
-* [nandroid.sh](/vega/nandroid.sh)
-* [initrd.img-2.6.32-custom](/vega/initrd.img-2.6.32-custom)
-* [vega_root.tgz](/vega/vega_root.tgz)
-* [linux-kern.img](/vega/linux-kern.img)
-* [thumbnail](/vega/thumbnail)
-* [zImage](/vega/zImage)
+* [nandroid.sh](/files/vega/nandroid.sh)
+* [initrd.img-2.6.32-custom](/files/vega/initrd.img-2.6.32-custom)
+* [vega_root.tgz](/files/vega/vega_root.tgz)
+* [linux-kern.img](/files/vega/linux-kern.img)
+* [thumbnail](/files/vega/thumbnail)
+* [zImage](/files/vega/zImage)
 

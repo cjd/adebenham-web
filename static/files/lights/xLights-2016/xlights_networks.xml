@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Networks computer="bipolar">
+  <network NetworkType="E131" Enabled="Yes" ComPort="192.168.0.60" BaudRate="1" MaxChannels="510" Description="5V E682" NumUniverses="12"/>
+  <network NetworkType="E131" Enabled="Yes" ComPort="192.168.0.61" BaudRate="13" MaxChannels="510" Description="12V E682" NumUniverses="12"/>
+  <network NetworkType="E131" ComPort="192.168.0.62" BaudRate="25" MaxChannels="510" Description="5V Pixlite4" NumUniverses="5"/>
+  <network NetworkType="E131" ComPort="192.168.0.63" BaudRate="30" MaxChannels="510" Description="PixelStick"/>
+</Networks>

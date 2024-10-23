@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xrgb>
+  <models>
+    <model DisplayAs="Single Line" StringType="RGB Nodes" StartSide="B" Antialias="1" PixelSize="2" Transparency="0" parm1="1" parm2="50" parm3="1" LayoutGroup="Default" name="Garage Strip Front" Dir="R" Description="12V WS2811 Strip" X1="0.039844" Y1="0.605027" X2="0.378125" Y2="0.605027" versionNumber="1" StartChannel="#13:310">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" LayoutGroup="Default" parm1="1" parm2="100" parm3="4" name="Tree - Right" DisplayAs="Vert Matrix" offsetXpct="0.7562" offsetYpct="0.4471" PreviewScaleX="0.0188" PreviewScaleY="0.2873" PreviewRotation="0" versionNumber="1" StartChannel="&gt;Tree - Left:1"/>
+    <model StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" LayoutGroup="Default" DisplayAs="Vert Matrix" parm1="1" parm2="100" parm3="4" name="Tree - Left" offsetXpct="0.5390" offsetYpct="0.4668" PreviewScaleX="0.0203" PreviewScaleY="0.2729" PreviewRotation="0" versionNumber="1" StartChannel="#15:490"/>
+    <model Antialias="1" PixelSize="2" Transparency="0" LayoutGroup="Default" DisplayAs="Vert Matrix" parm1="1" parm2="150" parm3="15" name="Shirt Matrix" StringType="GRB Nodes" Dir="R" StartSide="B" Description="5V WS2811 Strip" offsetXpct="0.3812" offsetYpct="0.3357" PreviewScaleX="0.0547" PreviewScaleY="0.1329" PreviewRotation="0" versionNumber="1" StartChannel="#30:1">
+      <dimmingCurve>
+        <all brightness="-90" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model DisplayAs="Candy Canes" StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" parm3="1" name="Candy Canes" LayoutGroup="Default" parm1="5" parm2="10" CandyCaneReverse="false" Description="5V WS2811 Pixels" CandyCaneHeight="0.700000" CandyCaneSticks="false" X1="0.562501" Y1="0.263914" X2="0.785156" Y2="0.263914" Height="1.000000" Angle="0" versionNumber="1" StartChannel="#5:361">
+      <dimmingCurve>
+        <all brightness="-50" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model DisplayAs="Custom" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" parm3="1" LayoutGroup="Default" name="Nativity" Description="12V WS2811 Pixels" parm2="10" parm1="10" CustomModel="1,1,,,,,,,,;1,1,,,,,,,,;1,1,,,,,3,3,,;1,1,,,,,3,3,,;1,1,,,,,,3,3,;1,1,,,,,,3,3,;1,1,,,,,,3,3,;1,1,,2,2,2,,3,3,;1,1,,2,2,2,,3,3,3;1,1,,2,2,2,,3,3,3" CustomBkgLightness="0" StringType="BGR Nodes" offsetXpct="0.9274" offsetYpct="0.3573" PreviewScaleX="0.0750" PreviewScaleY="0.1185" PreviewRotation="0" versionNumber="1" StartChannel="&gt;Small Spiral Tree 4:1">
+      <dimmingCurve>
+        <all brightness="0" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" parm2="50" parm3="1" DisplayAs="Tree 360" LayoutGroup="Default" TreeRotation="0.000000" TreeSpiralRotations="10.000000" parm1="1" name="Small Spiral Tree 4" Description="12V WS2811 Strip" offsetXpct="0.8343" offsetYpct="0.3842" PreviewScaleX="0.0437" PreviewScaleY="0.1939" PreviewRotation="0" versionNumber="1" StartChannel="&gt;Small Spiral Tree 3:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" parm2="50" parm3="1" DisplayAs="Tree 360" LayoutGroup="Default" TreeRotation="0.000000" parm1="1" TreeSpiralRotations="10.000000" name="Small Spiral Tree 3" Description="12V WS2811 Strip" offsetXpct="0.7523" offsetYpct="0.3806" PreviewScaleX="0.0437" PreviewScaleY="0.2047" PreviewRotation="0" versionNumber="1" StartChannel="&gt;Small Spiral Tree 2:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" parm2="50" parm3="1" DisplayAs="Tree 360" LayoutGroup="Default" TreeRotation="0.000000" TreeSpiralRotations="10.000000" parm1="1" name="Small Spiral Tree 2" Description="12V WS2811 Strip" offsetXpct="0.5407" offsetYpct="0.3914" PreviewScaleX="0.0406" PreviewScaleY="0.1867" PreviewRotation="0" versionNumber="1" StartChannel="&gt;Small Spiral Tree 1:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" parm2="50" LayoutGroup="Default" DisplayAs="Tree Ribbon" parm1="1" parm3="5" name="Small Ribbon Tree" Description="12V WS2811 Strip" offsetXpct="0.0891" offsetYpct="0.7127" PreviewScaleX="0.0547" PreviewScaleY="0.1436" PreviewRotation="0" versionNumber="1" StartChannel="#15:340">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" parm2="50" parm3="1" DisplayAs="Tree 360" LayoutGroup="Default" parm1="1" TreeSpiralRotations="10.000000" name="Small Spiral Tree 1" Description="12V WS2811 Strip" offsetXpct="0.4813" offsetYpct="0.3913" PreviewScaleX="0.0359" PreviewScaleY="0.1795" PreviewRotation="0" versionNumber="1" StartChannel="#17:70">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model DisplayAs="Single Line" StringType="RGB Nodes" StartSide="B" Antialias="1" PixelSize="2" Transparency="0" parm1="1" parm2="50" parm3="1" name="Roof Strip 2" LayoutGroup="Default" Description="12V WS2811 Strip" Dir="R" X1="0.426562" Y1="0.813285" X2="0.581250" Y2="0.741472" versionNumber="1" StartChannel="&gt;Roof Strip 1:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model DisplayAs="Star" StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" parm1="1" parm3="5" parm2="10" name="Tree - Spiral Star" LayoutGroup="Default" Description="5V WS2811 Pixels" offsetXpct="0.0500" offsetYpct="0.4865" PreviewScaleX="0.0234" PreviewScaleY="0.0503" PreviewRotation="0" versionNumber="1" StartChannel="&gt;Tree - Spiral:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" parm3="1" DisplayAs="Tree 360" TreePerspective="0.100000" TreeBottomTopRatio="9.000000" parm1="1" TreeSpiralRotations="9.500000" TreeRotation="0" name="Tree - Spiral" parm2="153" LayoutGroup="Default" Description="5V WS2811 Pixels" offsetXpct="0.0523" offsetYpct="0.2657" PreviewScaleX="0.0750" PreviewScaleY="0.3878" PreviewRotation="0" versionNumber="1" StartChannel="#28:214">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model DisplayAs="Custom" StartSide="B" Dir="L" parm3="1" CustomModel=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,114,115,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,113,,,116,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,112,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,117,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,111,,,,,,118,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,110,,,,,,119,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,109,,,,,,,,120,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,108,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,107,,,,,,,,,,,,,121,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,106,,,,,,,,,,,,,,,122,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,123,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,105,,,,,,,,,,,,,,,,,124,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,104,,,,,,,,,,,,,,,,,,,,125,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,103,,,,,98,,97,,,,,,,,,82,81,,,,,126,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,102,,,,,99,,,,96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,233,,,,,,100,,,,,,95,,,,,83,,,,80,,,,,,127,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,232,,,,,,,,,,,,,,,,,84,,,,,,79,,,,,,128,,,,,,,,,,,,,,;,,,,,,,,,,,230,,231,,,,,,,,101,,,,,,85,,,,74,,,,,,78,,,,,,,129,,,,,,,,,,,,,;,,,,,,,,,228,229,,,,,,,,,,,91,92,,93,,94,86,,,,,,75,76,,77,,,,,,,,,,130,131,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,73,,,,,,68,,,,,,,,,,,132,,,,,,,,,;,,,,,,,227,,,,,,,,,,,,,,,90,,,,,87,,,,,72,,,,69,,,,,,,,,,,,,133,,,,,,,,;,,,,,,,,,226,,,,,,,,,,,,,,,89,88,,,,,,,,,,,,,,,,,,,,,,,,,134,,,,,,,;,,,,,,,,,,225,224,,,,,,,,,,,,,,,,,,,,,,71,,70,,,,,,,,,,,,,,135,,,,,,,,;,,,,,,,,,,,,,223,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,137,136,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,138,,,,,,,,,,,,;,,,,,,,,,,,,222,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,221,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,139,,,,,,,,,,,,;,,,,,,,,,,220,,,,,,,,51,52,,,,,,,,,,,,,,,,,,,,,,,,,,,,140,,,,,,,,,,;,,,,,,,,219,,,,,,,,,,,,,53,,,,,,,,,,,,,,,,,,66,67,,,,,,,,141,,,,,,,,,;,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,142,,,,,,,;,,,,,,,218,,,,,,,,,,,,,,,54,,,,,,,,,,,,,,,65,,,25,,,,,,,,,,,,,,,,,;,,,,,,217,,,,,,,,,,,2,,50,,,,55,,,,,,,,,,,,,,64,,26,,,,,,,,,,,,143,,,,,,;,,,,216,,,,,,,,,,,,,,,,49,,,,56,,,,,,,,,,,63,,,,,24,,,,,,,,,,,,144,,,,,;,,,215,,,,,,,,,,,,,,,3,,,,,,,,57,,,,,,61,,62,,,,27,,,,,,,,,,,,,,,,145,,,;,,214,,,,,,,,,,,,,,,,,,,,48,,,,,58,,59,,60,,,,,,28,,,,23,,,,,,,,,,,,,,146,,;,,,,,,,,,,,,,,,,,,4,,,,,47,,46,,,,,,,,45,,29,,,,,,,,,,,,,,,,,,,,,147,;,,213,,,,,,,,,,,,,,,,,,,,,,,40,,,,,,,,,30,,,,,,22,,,,,,,,,,,,,,,,,;,,,,212,211,,210,,,,,,,,,,,,,5,,,,,,41,,42,,43,,,44,,,,,,,,,,,,,,,,,,,,,,148,,;,,,,,,,,,209,,,,,,,,,,,,,,,39,,,,,,,,,,31,,,,,21,,,,,,,,,,,,151,150,,149,,,;,,,,,,,,,,,,,,,,,,,,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,152,,,,,,,;,,,,,,,,208,,,,,,,,,,,,,7,,,,38,,,,,,,,,32,,,20,,,,,,,,,,,,,153,,,,,,,;,,,,,,,207,,,,,,,,,,,,,,,,,,,37,,,,,,,,,,,19,,,,,,,,,,,,,,154,,,,,,;,,,,,,,,,,,,,,,,,,,,,,8,,,,,36,,,,,33,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,206,,,,,,,,,,,,,,,,,,,,,,,,35,,34,,,,,18,,,,,,,,,,,,,,,,155,,,,,;,,,,205,,,,,,,,,,,,,,,,,,,9,,,,,,,,,,,,17,,,,,,,,,,,,,,,,,,156,,,,;,,,204,,,,,,,,,,,,,,,,,,,,,10,,,,,,,,,,16,,,,,,,,,,,,,,,,,,,,,157,,;,203,,,,,,,,,,,,,,,,,,,,,,,,,11,12,,13,,14,15,,,,,,,,,,,,,,,,,,,,,,,,,;202,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,158,;,201,,,,,197,,196,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,159;,,,,,,,,,,,,,192,,191,,,,,,,186,185,,,,,,,,,,,,176,,175,,,,,,170,169,,,,,,165,164,,,,,160,;,,200,,199,198,,,,195,,194,193,,,,190,189,,188,187,,,,184,,183,182,181,180,,179,178,,177,,,,174,173,172,,171,,,,168,167,166,,,,,163,,161,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,162,,," parm1="58" parm2="52" StringType="RGB Nodes" PixelSize="2" Transparency="0" ModelBrightness="" Antialias="1" StrandNames="" NodeNames="" name="Singing_Tree" LayoutGroup="Default" Description="5V WS2811 Pixels" offsetXpct="0.4726" offsetYpct="0.5386" PreviewScaleX="0.0469" PreviewScaleY="0.0934" PreviewRotation="0" versionNumber="1" StartChannel="#26:1">
+      <faceInfo Name="Singer" CustomColors="1" Eyes-Closed="68-78,85-94,101" Eyes-Closed-Color="#ffffff" Eyes-Open="68-74,78-84,85-91,95-101,93,76" Eyes-Open-Color="#ffffff" FaceOutline="102-233" FaceOutline-Color="#00ff00" Mouth-AI="1-25,51-67" Mouth-AI-Color="#ff0000" Mouth-E="1-25,51-67" Mouth-E-Color="#ff0000" Mouth-FV="51-67" Mouth-FV-Color="#ff0000" Mouth-L="1,51-67,25-30,40-44,47-50,46,45" Mouth-L-Color="#ff0000" Mouth-MBP="51-67" Mouth-MBP-Color="#ff0000" Mouth-O="30-40,45-46,58-60" Mouth-O-Color="#ff0000" Mouth-U="30-40,45-46,58-60" Mouth-U-Color="#ff0000" Mouth-WQ="30-40,45-46,58-60" Mouth-WQ-Color="#ff0000" Mouth-etc="1,25-30,40-44,47-50,51-67" Mouth-etc-Color="#ff0000" Mouth-off="" Mouth-off-Color="" Mouth-rest="1,51-67,25-30,40-44,47-50" Mouth-rest-Color="#ff0000" Type="NodeRange"/>
+      <dimmingCurve>
+        <all brightness="-70" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model DisplayAs="Custom" StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" parm3="1" parm2="27" parm1="33" CustomModel=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,25,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,24,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,26,,,,;,,,,,,,,,,,,,,,,,,,,,,,,23,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,27,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,22,,,,,,,,,,;,,,,,,16,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,17,,,,,,,,,,,,,,,,,,,28,,,,;,,,,,,,15,,,,,,,,,,,,,,21,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,18,,,,,,,,,,,,,,,,,,,,;,,13,,,,14,,,,,,,,,,,,20,,,,,,,,,,,29,,,;,,,,,,,,,,,,,,,19,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;12,,,,,,,,,,,,,,,,,,,,,,,,,,,,30,,,,;,,,,,37,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,31,,,,1,,;,,,,,,,,36,,,35,,,,34,,,,33,,,,32,,,,,,,,,;11,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2;,,,10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,9,,,8,,,,7,,,,6,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,5,,,,4,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3,,," name="Pixel Sleigh" LayoutGroup="Default" Description="5V WS2811 Pixels" offsetXpct="0.2031" offsetYpct="0.6643" PreviewScaleX="0.0437" PreviewScaleY="0.0646" PreviewRotation="0" versionNumber="1" StartChannel="&gt;Pixel Santa:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model DisplayAs="Custom" StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" parm3="1" parm2="26" parm1="33" CustomModel=",,,,,,,18,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,17,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,20,19,,,,,,16,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,15,,,,,,,,,,,,,,,,,,,,,;,,,21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,14,,,,,,,,,,,,,,,,,,,,,,,,;,,,,22,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,7,,,,,,,,,,;,,,,,,,,13,,,,,,,,,,,,8,,,,,,,,,,,,;,,,,23,,,,,,,,,,,,,,9,,,,,,,,,,,,,,;,,,,,,,,,,12,,11,,,10,,,,,,,,6,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,24,,,,,,,,,,,,,,,,,,,,,5,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,37,,,,,,,,,,,,;,25,,,,,,,,,,,,,,,,36,,,,,,,,,,,,,,,;,,,,,,32,,,,,,,,,,,,,,,,,4,,,,,,,,,;,,,31,,,,,33,,,,34,,35,,,,,,,,,,,,,,,,,,;26,,,,,,,,,,,,,,,,,,,,,,38,,3,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,30,,,,,,,,,,,,,,,,,,,,39,,,2,,,,,;,,27,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,29,,,,,,,,,,,,,,,,,,,40,,,,,,;,,,,,28,,,,,,,,,,,,,,,,,,,,,,,,,41,,1" name="Pixel Reindeer" LayoutGroup="Default" Description="5V WS2811 Pixels" offsetXpct="0.1484" offsetYpct="0.6679" PreviewScaleX="0.0594" PreviewScaleY="0.0682" PreviewRotation="0" versionNumber="1" StartChannel="&gt;Pixel Sleigh:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model DisplayAs="Custom" StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" parm3="1" parm2="27" parm1="21" CustomModel=",,,,,,18,,17,,,,,,,,,,,,;,,,,,,,,,,16,,,,,,,,12,,11;,20,,19,,,,,,,,,,,,,,,,,;,,,,,,,,23,,,,,,,,13,,,,10;,21,,,,22,,,,,,15,,,,,,,,,;,,,,28,,,,,,,,,14,,,,,9,,;,,,,,,,,,,,,,,,,,,,,;,,,29,27,,,,,,,24,,7,,,8,,,,;,30,,,,,,,,,,,,,,,,,,,;,,,,,,26,,,,,,,,6,,,,,,;,,,,,,,,,25,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,;,31,,,,,,,,,,,,,,5,,,,,;,,,,,,,,,,,,,,,,,,,,;,,32,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,4,,,,,,;,,,,,,,,,,,,,,,,,,,,;,33,,42,,43,,,,,,45,,,,44,,,,,;,,,,,,,,,,,,,,,,3,,,,;,,,,,,,,41,,,,,,,,,,,,;,34,,,,,,,,46,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,;,,,35,,,,40,,,,47,,,2,,,,,,;,,,,,39,,,,,,48,,,,,,,,,;36,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,1,,,,;37,,,38,,,,,,,,,,49,,,50,,,," name="Pixel Santa" LayoutGroup="Default" Description="5V WS2811 Pixels" offsetXpct="0.2507" offsetYpct="0.6858" PreviewScaleX="0.0344" PreviewScaleY="0.1041" PreviewRotation="0" versionNumber="1" StartChannel="&gt;Singing_Tree:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model DisplayAs="Single Line" parm1="1" parm3="1" StartSide="B" PixelSize="2" Transparency="0" name="Gutter" Antialias="1" LayoutGroup="Default" Dir="L" Description="12V WS2811 Strip" parm2="75" StringType="RGB Nodes" X1="0.421875" Y1="0.608618" X2="0.765625" Y2="0.608618" versionNumber="1" StartChannel="&gt;House Corner Left:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model name="Left Window" DisplayAs="Custom" StringType="RGB Nodes" parm3="1" StartSide="B" Dir="L" PixelSize="2" Transparency="0" Antialias="1" LayoutGroup="Default" Description="5V WS2811 Pixels" parm2="18" parm1="16" CustomModel="33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18;34,,,,,,,,,,,,,,,17;35,,,,,,,,,,,,,,,16;36,,,,,,,,,,,,,,,15;37,,,,,,,,,,,,,,,14;38,,,,,,,,,,,,,,,13;39,,,,,,,,,,,,,,,12;40,,,,,,,,,,,,,,,11;41,,,,,,,,,,,,,,,10;42,,,,,,,,,,,,,,,9;43,,,,,,,,,,,,,,,8;44,,,,,,,,,,,,,,,7;45,,,,,,,,,,,,,,,6;46,,,,,,,,,,,,,,,5;47,,,,,,,,,,,,,,,4;48,,,,,,,,,,,,,,,3;49,,,,,,,,,,,,,,,2;50,,,,,,,,,,,,,,,1" CustomBkgLightness="0" offsetXpct="0.5379" offsetYpct="0.4666" PreviewScaleX="0.0780" PreviewScaleY="0.2410" PreviewRotation="0" versionNumber="1" StartChannel="&gt;Candy Canes:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model name="Right Window" DisplayAs="Custom" StringType="RGB Nodes" parm1="16" parm2="18" parm3="1" StartSide="B" Dir="L" PixelSize="2" Transparency="0" CustomModel="18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33;17,,,,,,,,,,,,,,,34;16,,,,,,,,,,,,,,,35;15,,,,,,,,,,,,,,,36;14,,,,,,,,,,,,,,,37;13,,,,,,,,,,,,,,,38;12,,,,,,,,,,,,,,,39;11,,,,,,,,,,,,,,,40;10,,,,,,,,,,,,,,,41;9,,,,,,,,,,,,,,,42;8,,,,,,,,,,,,,,,43;7,,,,,,,,,,,,,,,44;6,,,,,,,,,,,,,,,45;5,,,,,,,,,,,,,,,46;4,,,,,,,,,,,,,,,47;3,,,,,,,,,,,,,,,48;2,,,,,,,,,,,,,,,49;1,,,,,,,,,,,,,,,50" Antialias="1" LayoutGroup="Default" Description="5V WS2811 Pixels" offsetXpct="0.6845" offsetYpct="0.4737" PreviewScaleX="0.0766" PreviewScaleY="0.2549" PreviewRotation="0" versionNumber="1" StartChannel="&gt;Left Window:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model name="Big Star" DisplayAs="Star" StringType="RGB Nodes" starSizes="35,15" parm1="1" parm2="50" parm3="5" StartSide="B" Dir="R" PixelSize="2" Transparency="0" Antialias="1" LayoutGroup="Default" Description="5V WS2811 Pixels" offsetXpct="0.6532" offsetYpct="0.7464" PreviewScaleX="0.0390" PreviewScaleY="0.0880" PreviewRotation="1" versionNumber="1" StartChannel="#1:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model name="Megatree" DisplayAs="Tree 180" StringType="RGB Nodes" PixelSize="2" Transparency="0" Antialias="1" LayoutGroup="Default" Description="5V WS2811 Pixels" parm1="1" parm3="13" parm2="650" Dir="L" StartSide="B" offsetXpct="0.6533" offsetYpct="0.4934" PreviewScaleX="0.1109" PreviewScaleY="0.4093" PreviewRotation="0" versionNumber="1" StartChannel="#1:301">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model name="Arches" DisplayAs="Arches" parm2="10" parm3="3" StartSide="B" Antialias="1" PixelSize="2" Transparency="0" LayoutGroup="Default" Description="12V WS2811 Strip" StringType="RGB Nodes" Dir="L" parm1="10" X1="0.429687" Y1="0.253142" X2="0.979688" Y2="0.253142" Height="0.778007" Angle="0" versionNumber="1" StartChannel="#13:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model name="AC Sign" DisplayAs="Custom" StringType="Single Color White" parm1="4" parm2="2" parm3="1" StartSide="B" Dir="L" PixelSize="2" Transparency="0" CustomModel="1,1,1,1;1,1,1,1" Antialias="1" LayoutGroup="Default" Description="AC Renard" offsetXpct="0.4048" offsetYpct="0.5751" PreviewScaleX="0.0460" PreviewScaleY="0.0370" PreviewRotation="0" versionNumber="1" StartChannel="#25:1">
+      <dimmingCurve>
+        <all brightness="0" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model name="AC Truck" DisplayAs="Custom" StringType="Single Color White" parm1="5" parm2="5" parm3="1" StartSide="B" Dir="L" PixelSize="2" Transparency="0" CustomModel=",1,1,,;,1,1,,;1,1,1,1,1;1,1,1,1,1;1,1,1,1,1" Antialias="1" LayoutGroup="Default" Description="AC Renard" offsetXpct="0.0533" offsetYpct="0.2390" PreviewScaleX="0.0650" PreviewScaleY="0.0990" PreviewRotation="0" versionNumber="1" StartChannel="&gt;AC Sign:1"/>
+    <model name="Roof-Left" DisplayAs="Single Line" StringType="RGB Nodes" parm1="1" parm2="50" parm3="1" StartSide="B" Dir="L" PixelSize="2" Transparency="0" Antialias="1" LayoutGroup="Default" Description="12V WS2811 Strip" X1="0.416783" Y1="0.618295" X2="0.583217" Y2="0.742567" versionNumber="1" StartChannel="#18:169">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model name="Roof-Right" DisplayAs="Single Line" StringType="RGB Nodes" parm1="1" parm2="50" parm3="1" StartSide="B" Dir="L" PixelSize="2" Transparency="0" Antialias="1" LayoutGroup="Default" Description="12V WS2811 Strip" X1="0.584063" Y1="0.736130" X2="0.759687" Y2="0.635504" versionNumber="1" StartChannel="&gt;Roof-Left:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model DisplayAs="Single Line" StringType="RGB Nodes" StartSide="B" Antialias="1" PixelSize="2" Transparency="0" parm1="1" parm2="50" parm3="1" name="Roof Strip 1" LayoutGroup="Default" Description="12V WS2811 Strip" Dir="R" X1="0.484375" Y1="0.631957" X2="0.713281" Y2="0.637343" versionNumber="1" StartChannel="&gt;Roof-Right:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model DisplayAs="Single Line" StringType="RGB Nodes" StartSide="B" Antialias="1" PixelSize="2" Transparency="0" parm1="1" parm2="50" parm3="1" LayoutGroup="Default" name="Garage Strip Middle Back" Dir="R" Description="12V WS2811 Strip" X1="0.071875" Y1="0.488330" X2="0.402344" Y2="0.488330" versionNumber="1" StartChannel="&gt;Garage Strip Middle Front:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model DisplayAs="Single Line" StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" parm1="1" parm2="50" parm3="1" LayoutGroup="Default" name="Garage Strip Back" Description="12V WS2811 Strip" X1="0.085938" Y1="0.427289" X2="0.410156" Y2="0.427289" versionNumber="1" StartChannel="&gt;Garage Strip Middle Back:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model DisplayAs="Single Line" StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" parm1="1" parm2="50" parm3="1" LayoutGroup="Default" name="Garage Strip Middle Front" Description="12V WS2811 Strip" X1="0.054687" Y1="0.547576" X2="0.393750" Y2="0.547576" versionNumber="1" StartChannel="&gt;Garage Corner:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model DisplayAs="Single Line" StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" parm1="1" parm3="1" LayoutGroup="Default" parm2="25" name="House Corner Left" Description="12V WS2811 Strip" X1="0.443750" Y1="0.330341" X2="0.443750" Y2="0.587073" versionNumber="1" StartChannel="#14:475">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model DisplayAs="Single Line" StartSide="B" Antialias="1" PixelSize="2" Transparency="0" parm1="1" parm3="1" LayoutGroup="Default" parm2="25" name="House Corner Right" Dir="R" Description="12V WS2811 Strip" StringType="RGB Nodes" X1="0.771094" Y1="0.323160" X2="0.767969" Y2="0.594255" versionNumber="1" StartChannel="&gt;Gutter:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+    <model DisplayAs="Single Line" StringType="RGB Nodes" StartSide="B" Antialias="1" PixelSize="2" Transparency="0" parm1="1" parm3="1" name="Garage Corner" LayoutGroup="Default" parm2="25" Dir="R" Description="12V WS2811 Strip" X1="0.032031" Y1="0.289048" X2="0.032031" Y2="0.587074" versionNumber="1" StartChannel="&gt;Garage Strip Front:1">
+      <dimmingCurve>
+        <all brightness="-75" gamma="1.0"/>
+      </dimmingCurve>
+    </model>
+  </models>
+  <effects version="0006"/>
+  <palettes/>
+  <views/>
+  <modelGroups>
+    <modelGroup name="Group - RGB" GridSize="400" layout="minimalGrid" models="Big Star,Left Window,Right Window,Gutter,Arches,Megatree,Roof-Left,Roof-Right,Pixel Santa,Pixel Reindeer,Pixel Sleigh,Singing_Tree,Tree - Spiral,Tree - Spiral Star,Roof Strip 1,Roof Strip 2,Garage Strip Middle Back,Garage Strip Back,Garage Strip Middle Front,Garage Corner,House Corner Left,House Corner Right,Small Ribbon Tree,Small Spiral Tree 1,Small Spiral Tree 2,Small Spiral Tree 3,Small Spiral Tree 4,Nativity,Candy Canes,Garage Strip Front,Shirt Matrix,Tree - Left,Tree - Right" LayoutGroup="Default"/>
+    <modelGroup layout="minimalGrid" GridSize="400" models=",AC Sign,AC Truck" name="Group - AC" LayoutGroup="Default"/>
+    <modelGroup name="Group - Mini Trees" models="Small Spiral Tree 1,Small Spiral Tree 2,Small Spiral Tree 3,Small Spiral Tree 4" GridSize="400" layout="minimalGrid" LayoutGroup="Default"/>
+    <modelGroup name="Group - Whole House" models="Big Star,Garage Corner,Garage Strip Middle Back,Garage Strip Back,Garage Strip Middle Front,Gutter,House Corner Left,House Corner Right,Left Window,Megatree,Pixel Reindeer,Pixel Santa,Pixel Sleigh,Right Window,Roof Strip 1,Roof Strip 2,Roof-Left,Roof-Right,Singing_Tree,Tree - Spiral,Tree - Spiral Star,Small Ribbon Tree,Small Spiral Tree 1,Small Spiral Tree 2,Small Spiral Tree 3,Small Spiral Tree 4,Nativity,Candy Canes,Garage Strip Front,Shirt Matrix,Tree - Left,Tree - Right,Arches" GridSize="400" layout="grid" LayoutGroup="Default"/>
+    <modelGroup name="Group - Roof" GridSize="400" layout="grid" models="Garage Strip Middle Back,Garage Strip Back,Garage Strip Middle Front,Gutter,Roof Strip 1,Roof Strip 2,Roof-Left,Roof-Right,Garage Corner,House Corner Left,House Corner Right,Garage Strip Front" LayoutGroup="Default"/>
+    <modelGroup selected="0" name="Group - Stars" models="Big Star,Tree - Spiral Star,Nativity" GridSize="400" layout="Overlay - Scaled" LayoutGroup="Default"/>
+    <modelGroup selected="0" name="Group - Verticals" models="Tree - Left,Tree - Right" GridSize="400" layout="minimalGrid" LayoutGroup="Default"/>
+  </modelGroups>
+  <perspectives current="Single Monitor">
+    <perspective name="Dual Monitor" settings="layout2|name=ModelPreview;caption=Model Preview;state=2099196;dir=4;layer=0;row=1;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=51;floaty=577;floatw=326;floath=448|name=HousePreview;caption=House Preview;state=2115581;dir=4;layer=0;row=0;pos=2;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=2003;floaty=12;floatw=1392;floath=544|name=EffectAssist;caption=Effect Assist;state=2099198;dir=4;layer=0;row=0;pos=5;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=DisplayElements;caption=Display Elements;state=2099199;dir=4;layer=0;row=0;pos=0;prop=100000;bestw=326;besth=481;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=98;floaty=72;floatw=334;floath=505|name=Perspectives;caption=Perspectives;state=2099198;dir=4;layer=0;row=0;pos=3;prop=100000;bestw=171;besth=171;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Effect;caption=Effect Settings;state=2099196;dir=1;layer=1;row=0;pos=1;prop=125000;bestw=175;besth=175;minw=175;minh=175;maxw=-1;maxh=-1;floatx=752;floaty=175;floatw=400;floath=250|name=EffectDropper;caption=Effects;state=2099198;dir=4;layer=0;row=0;pos=4;prop=100000;bestw=150;besth=182;minw=150;minh=150;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Color;caption=Color;state=2099196;dir=1;layer=1;row=0;pos=2;prop=75000;bestw=184;besth=178;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=387;floaty=150;floatw=192;floath=202|name=LayerTiming;caption=Layer Blending;state=2099198;dir=4;layer=0;row=0;pos=0;prop=100000;bestw=778;besth=707;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=LayerSettings;caption=Layer Settings;state=2099196;dir=1;layer=1;row=0;pos=0;prop=100000;bestw=262;besth=286;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=202;floaty=166;floatw=270;floath=310|name=Main Sequencer;caption=Main Sequencer;state=768;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=250;besth=214;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=252|dock_size(1,1,0)=304|dock_size(4,0,1)=347|" version="2.0"/>
+    <perspective name="Single Monitor" settings="layout2|name=ModelPreview;caption=Model Preview;state=2099196;dir=4;layer=0;row=0;pos=1;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=HousePreview;caption=House Preview;state=2099196;dir=1;layer=1;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=51;floaty=184;floatw=1392;floath=544|name=EffectAssist;caption=Effect Assist;state=2099198;dir=4;layer=0;row=0;pos=6;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=DisplayElements;caption=Display Elements;state=2099199;dir=4;layer=0;row=0;pos=0;prop=100000;bestw=326;besth=481;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=98;floaty=72;floatw=334;floath=505|name=Perspectives;caption=Perspectives;state=2099198;dir=4;layer=0;row=0;pos=4;prop=100000;bestw=171;besth=171;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Effect;caption=Effect Settings;state=2099196;dir=4;layer=0;row=0;pos=0;prop=125000;bestw=175;besth=175;minw=175;minh=175;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=EffectDropper;caption=Effects;state=2099198;dir=4;layer=0;row=0;pos=5;prop=100000;bestw=150;besth=182;minw=150;minh=150;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Color;caption=Color;state=2115580;dir=1;layer=1;row=0;pos=2;prop=75000;bestw=184;besth=178;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=1351;floaty=178;floatw=192;floath=202|name=LayerTiming;caption=Layer Blending;state=2099198;dir=4;layer=0;row=0;pos=1;prop=100000;bestw=778;besth=707;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=LayerSettings;caption=Layer Settings;state=2099196;dir=1;layer=1;row=0;pos=1;prop=100000;bestw=262;besth=286;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=337;floaty=171;floatw=270;floath=310|name=Main Sequencer;caption=Main Sequencer;state=768;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=250;besth=214;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(4,0,0)=419|dock_size(5,0,0)=252|dock_size(1,1,0)=242|" version="2.0"/>
+    <perspective name="Timing work" settings="layout2|name=ModelPreview;caption=Model Preview;state=2099198;dir=4;layer=0;row=0;pos=6;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=HousePreview;caption=House Preview;state=2115581;dir=4;layer=0;row=0;pos=2;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=1842;floaty=247;floatw=1392;floath=544|name=EffectAssist;caption=Effect Assist;state=2099198;dir=4;layer=0;row=0;pos=5;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=DisplayElements;caption=Display Elements;state=2099199;dir=4;layer=0;row=0;pos=0;prop=100000;bestw=326;besth=481;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=98;floaty=72;floatw=334;floath=505|name=Perspectives;caption=Perspectives;state=2099198;dir=4;layer=0;row=0;pos=0;prop=100000;bestw=171;besth=171;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Effect;caption=Effect Settings;state=2099198;dir=4;layer=0;row=0;pos=0;prop=125000;bestw=175;besth=175;minw=175;minh=175;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=EffectDropper;caption=Effects;state=2099198;dir=4;layer=0;row=0;pos=4;prop=100000;bestw=150;besth=182;minw=150;minh=150;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Color;caption=Color;state=2099198;dir=4;layer=0;row=0;pos=0;prop=75000;bestw=184;besth=178;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=LayerTiming;caption=Layer Blending;state=2099198;dir=4;layer=0;row=0;pos=0;prop=100000;bestw=778;besth=707;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=LayerSettings;caption=Layer Settings;state=2099198;dir=4;layer=0;row=0;pos=0;prop=100000;bestw=262;besth=286;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Main Sequencer;caption=Main Sequencer;state=768;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=250;besth=214;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=252|" version="2.0"/>
+    <perspective name="Face timing" settings="layout2|name=ModelPreview;caption=Model Preview;state=2115580;dir=1;layer=1;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=688;floaty=151;floatw=318;floath=324|name=HousePreview;caption=House Preview;state=2099199;dir=4;layer=0;row=0;pos=2;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=1842;floaty=247;floatw=1392;floath=544|name=EffectAssist;caption=Effect Assist;state=2099198;dir=4;layer=0;row=0;pos=5;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=DisplayElements;caption=Display Elements;state=2099199;dir=4;layer=0;row=0;pos=0;prop=100000;bestw=326;besth=481;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=98;floaty=72;floatw=337;floath=505|name=Perspectives;caption=Perspectives;state=2099198;dir=4;layer=0;row=0;pos=0;prop=100000;bestw=171;besth=171;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Effect;caption=Effect Settings;state=2099198;dir=4;layer=0;row=0;pos=0;prop=125000;bestw=175;besth=175;minw=175;minh=175;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=EffectDropper;caption=Effects;state=2099198;dir=4;layer=0;row=0;pos=4;prop=100000;bestw=150;besth=182;minw=150;minh=150;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Color;caption=Color;state=2099198;dir=4;layer=0;row=0;pos=0;prop=75000;bestw=184;besth=178;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=LayerTiming;caption=Layer Blending;state=2099198;dir=4;layer=0;row=0;pos=0;prop=100000;bestw=778;besth=707;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=LayerSettings;caption=Layer Settings;state=2099198;dir=4;layer=0;row=0;pos=0;prop=100000;bestw=262;besth=286;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Main Sequencer;caption=Main Sequencer;state=768;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=250;besth=214;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=252|dock_size(1,1,0)=128|" version="2.0"/>
+    <perspective name="All dialogs" settings="layout2|name=ModelPreview;caption=Model Preview;state=2099196;dir=4;layer=0;row=0;pos=2;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=HousePreview;caption=House Preview;state=2099196;dir=1;layer=1;row=1;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=51;floaty=184;floatw=1392;floath=544|name=EffectAssist;caption=Effect Assist;state=2099198;dir=4;layer=0;row=0;pos=6;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=DisplayElements;caption=Display Elements;state=2115580;dir=1;layer=1;row=0;pos=0;prop=100000;bestw=326;besth=481;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=547;floaty=164;floatw=337;floath=505|name=Perspectives;caption=Perspectives;state=2099196;dir=4;layer=0;row=0;pos=4;prop=100000;bestw=171;besth=171;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Effect;caption=Effect Settings;state=2099196;dir=4;layer=0;row=0;pos=0;prop=125000;bestw=175;besth=175;minw=175;minh=175;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=EffectDropper;caption=Effects;state=2099196;dir=4;layer=0;row=0;pos=3;prop=100000;bestw=150;besth=182;minw=150;minh=150;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Color;caption=Color;state=2099196;dir=1;layer=1;row=1;pos=2;prop=75000;bestw=184;besth=178;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=1351;floaty=178;floatw=192;floath=202|name=LayerTiming;caption=Layer Blending;state=2099196;dir=4;layer=0;row=0;pos=1;prop=100000;bestw=778;besth=707;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=LayerSettings;caption=Layer Settings;state=2099196;dir=1;layer=1;row=1;pos=1;prop=100000;bestw=262;besth=286;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=337;floaty=171;floatw=270;floath=310|name=Main Sequencer;caption=Main Sequencer;state=768;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=250;besth=214;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(4,0,0)=419|dock_size(5,0,0)=252|dock_size(1,1,0)=242|dock_size(1,1,1)=132|" version="2.0"/>
+  </perspectives>
+  <settings>
+    <backgroundImage value="/home/cjd/Owncloud/Lights/House_2015_dim_1280.jpg"/>
+    <scaleImage value="0"/>
+    <backgroundBrightness value="25"/>
+    <previewWidth value="1280"/>
+    <previewHeight value="557"/>
+  </settings>
+  <layoutGroups/>
+</xrgb>
