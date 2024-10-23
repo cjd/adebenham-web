@@ -20,7 +20,7 @@ menu:
   // initialize Pagefind UI
   window.addEventListener('DOMContentLoaded', (event) => {
     let pagefind = new PagefindUI({ element: "#search" });
-    if (searchString) { 
+    if (searchString) {
       pagefind.triggerSearch(searchString);
     }
   });
