@@ -4,7 +4,7 @@ date: "2010-02-04T03:14:19+00:00"
 title: Climbing Wall
 summary: Home Bouldering wall build
 url: /old-stuff/climb/
-thumbnail: /files/climb/images/side_holds_2.jpg
+thumbnail: /files/climb/images/thn_side_holds_2.jpg
 
 ---
 I while back I built a home bouldering wall.
