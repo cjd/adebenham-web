@@ -5,6 +5,7 @@ title: Climbing Wall
 summary: Home Bouldering wall build
 url: /old-stuff/climb/
 thumbnail: /files/climb/images/thn_side_holds_2.jpg
+toc: false
 
 ---
 I while back I built a home bouldering wall.

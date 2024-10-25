@@ -5,6 +5,7 @@ title: Linux on the Vega Tablet
 url: /laptop/vega/
 summary: Details on getting Linux working on a Vega tablet
 thumbnail: /files/vega/thumbnail/TN-2011-03-31_15-35-49_788.jpg
+toc: false
 
 ---
 # Ubuntu Linux on the Vega

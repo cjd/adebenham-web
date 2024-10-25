@@ -5,6 +5,7 @@ title: FVWM
 url: /old-stuff/fvwm/
 summary: My FVWM configuration
 thumbnail: /files/fvwm/fvwm-thumbnail.jpg
+toc: false
 
 ---
  [![thumbnail screenshot](/files/fvwm/fvwm-thumbnail.jpg)](/files//fvwm/fvwm-screenshot.jpg)
