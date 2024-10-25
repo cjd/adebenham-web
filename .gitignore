@@ -1,6 +1,5 @@
 static/debian
 static/debian-archive
-static/lights
 static/lists
 .hugo_build.lock
 static/wedding
