@@ -1,0 +1,84 @@
+</td></tr>
+                          <tr>
+                            <td align="center" valign="top">
+<div id=counter name=counter></div>
+<script language="javascript" type="text/javascript">
+function countdown () {
+    today  = new Date();
+    todayEpoch  = today.getTime();
+    
+    target = new Date(2006,2,11,14,0,0); 
+    targetEpoch = target.getTime();
+    
+    difference = (targetEpoch - todayEpoch)/1000;
+    if (difference < 0) { 
+        countitem = document.getElementById("counter");
+        countitem.innerHTML = "<h1>We are already Married by now!</h1>";
+    } else {
+        days=Math.floor(difference/86400);
+        difference = difference % 86400
+        hours=Math.floor(difference/3600);
+        difference = difference % 3600
+        minutes=Math.floor(difference/60);
+        seconds = Math.floor(difference % 60);
+        countitem = document.getElementById("counter");
+        countitem.innerHTML = "There are now "+days+" Days, "+hours+" Hours, "+minutes+" minutes and "+seconds+" seconds left until the wedding";
+        setTimeout('countdown()',1000);
+    }
+}
+countdown();
+</script>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" bgcolor="#9E2D19" height="48" valign="top">
+                              <table border="0" cellpadding="0" cellspacing="0" height="48">
+                                <tbody>
+                                  <tr>
+                                    <td align="right" valign="bottom"><img src="footer.png" height="48" width="544" /></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+
+            <td height="100%" width="9"></td>
+
+            <td rowspan="2" bgcolor="#FFFFFF" height="100%" width="12"></td>
+          </tr>
+
+          <tr>
+            <td colspan="3" bgcolor="#C73830" height="9"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="bottom">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" width="772">
+        <tbody>
+          <tr>
+            <td align="center" bgcolor="#FFFFFF" height="9" valign="top"></td>
+          </tr>
+
+          <tr>
+            <td align="center" height="9" valign="top"></td>
+          </tr>
+
+          <tr>
+            <td align="center" height="24" valign="top"><span class="c10" style="color: rgb(0, 0, 0);"><a class="c10" href="http://www.wedquarters.com/" style="color: rgb(0, 0, 0);" target=
+            "_top"><br /></a></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </center>
+</body>
+</html>
