@@ -16,10 +16,6 @@ xLights is a free and open source program that enables you to design, create and
 It runs on Windows, OSX and Linux.
 For more information see [http://xlights.org](http://xlights.org)
 
-For all linux distros (x86\_64 only) I am creating [AppImage](http://appimage.org) builds.  These are now auto-built wheneve a new release is tagged and can be found at [https://github.com/smeighan/xLights/releases](https://github.com/smeighan/xLights/releases)
+For all linux distros (x86\_64 only) I am creating [AppImage](http://appimage.org) builds.  These are now auto-built whenever a new release is tagged and can be found at [https://github.com/xLightsSequencer/xLights/releases](https://github.com/xLightsSequencer/xLights/releases)
 
 To install simply download the most recent, set it executable (for example 'chmod +x ./xLights-x86\_64.AppImage') and then run directly.
-
-Builds prior to 2020.23 (when autobuilds started) are listed below.
-
-\[MMFileList folder="/../../xlights" format="table" types="AppImage"  class="" orderby="date"\]

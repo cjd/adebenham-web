@@ -1,7 +1,7 @@
 ---
 author: cjd
 date: "2010-02-04T01:10:24+00:00"
-title: MP3sb
+title: MP3SB
 url: /old-stuff/mp3sb/
 summary: MP3 Server Box is a perl script that acts as a network interface to the rxaudio or a patched version of mpg123 player.
 thumbnail: /images/mp3sb.png

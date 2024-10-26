@@ -12,10 +12,10 @@ Recently I was thinking about how my websites are handled and realised that they
 After looking at some of the various static-site generator options I settled on [Hugo](https://gohugo.io) for a couple of reasons.
 
 
-* The first reason was that I've spent a lot of time over the past few years working with YAML (thanks k8s) so I apprecciate that I can do all the configuration in YAML
+* The first reason was that I've spent a lot of time over the past few years working with YAML (thanks k8s) so I appreciate that I can do all the configuration in YAML
 * The second was that the site contents are all written using Markdown (used for internal documentation where I work)
 * The third was that it all runs from a single binary which I can grab pre-compiled from github (so no need to install any packages/recompile manually)
-* The fouth I also like the what content can be laid out in a structured and navigable manner
+* The fourth I also like the what content can be laid out in a structured and navigable manner
 * The fifth is that it is themeable in a reproducible way
 * Finally I really appreciate that the way it works fits nicely into version control (so I can put it all in git)
 
