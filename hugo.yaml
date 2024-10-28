@@ -1,5 +1,5 @@
 publishDir: /home/cjd/Sync/Website/adebenham/
-baseURL: /
+baseURL: https://www.adebenham.com/
 languageCode: en-AU
 title: Dual Elephants - Chris Debenhams homepage
 theme: mainroad
@@ -20,7 +20,7 @@ params:
   showToc: true
   showBreadCrumbs: true
   showCodeCopyButtons: true
-  comments: true
+  comments: false
   hideFooter: false
   opengraph: true
   schema: true
