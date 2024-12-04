@@ -4,7 +4,7 @@ title: Moved to Hugo
 date: "2024-10-21T19:06:46+11:00"
 tags:
   - general
-url: /blog/2020/10/moved-to-hugo
+url: /blog/2024/10/moved-to-hugo
 ---
 
 Recently I was thinking about how my websites are handled and realised that they are extremely static and so using WordPress as the CMS was overkill.  This led me down the path of trying to find a replacement.
