@@ -22,13 +22,13 @@ It is available in two formats.
 
 The first is a directly scanned copy of the book in PDF format. It is quite large (79MB) but is a direct copy of the original book.
 
-[Scanned copy of book (79MB pdf)](/files/debenham/Seven_Centuries_Of_Debenhams-scanned.pdf)
+[Scanned copy of book (79MB pdf)](Seven_Centuries_Of_Debenhams-scanned.pdf)
 
 ## OCR'd PDF
 
 The book was then OCR'd (converted to text) and reformatted to be suitable for viewing on electronic devices (ereaders, phones, tablets etc). This is much smaller (6.6MB) and has the advantage that you can search the contents directly.
 
-[Reformatted/created copy of book (6.6MB pdf)](/files/debenham/Seven_Centuries_of_Debenhams.pdf)
+[Reformatted/created copy of book (6.6MB pdf)](Seven_Centuries_of_Debenhams.pdf)
 
 ## Zoomable copy of the Debenham Family Tree
 
