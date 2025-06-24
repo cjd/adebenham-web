@@ -33,6 +33,8 @@ params:
   style:
     vars:
       highlightColor: "#8888FF"
+  customCSS:
+    - /css/custom.css
   sidebar:
     home: right
     list: left

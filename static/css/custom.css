@@ -1,0 +1,22 @@
+.wrapper {
+  background-image: linear-gradient(to right, #BBBBFF, #8888FF);
+}
+.logo {
+  background-image: linear-gradient(to right, #EEEEFF, #AAAAFF);
+}
+
+a {
+  color: #4444FF;
+}
+
+.content a, .warning a, .authorbox__description a {
+  color: #4444FF;
+}
+
+body {
+  background: #EEEEFF;
+}
+
+html {
+  background: #EEEEFF;
+}
