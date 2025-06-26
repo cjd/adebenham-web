@@ -39,3 +39,21 @@ pre, code {
   background: #444488;
   color: #ccccff;
 }
+
+.widget-search__form {
+  background: #445599;
+}
+
+.widget-search__field {
+  background: #8888FF;
+  border: 1px solid #222244;
+  color: #FFFFFF;
+}
+
+.widget-search__field::placeholder {
+  color: #FFFFFF;
+}
+
+.pagination__item {
+  background: #8888BB;
+}
