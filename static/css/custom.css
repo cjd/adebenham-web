@@ -1,22 +1,41 @@
 .wrapper {
-  background-image: linear-gradient(to right, #BBBBFF, #8888FF);
+  background-image: linear-gradient(to right, #334488, #445599);
 }
 .logo {
-  background-image: linear-gradient(to right, #EEEEFF, #AAAAFF);
+  background-image: linear-gradient(to right, #3344AA, #4455BB);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #DDDDFF;
 }
 
 a {
-  color: #4444FF;
+  color: #CCCCFF;
 }
 
 .content a, .warning a, .authorbox__description a {
-  color: #4444FF;
+  color: #CCCCFF;
 }
 
 body {
-  background: #EEEEFF;
+  background-image: linear-gradient(to right, #445599, #334488);
+  color: #FFFFFF;
 }
 
 html {
-  background: #EEEEFF;
+  background-image: linear-gradient(to right, #445599, #334488);
+}
+
+.meta, .meta a {
+  color: #8888BB;
+}
+
+pre, code {
+  background-color: #444488;
+  color: #ccccff;
+}
+
+.toc {
+  background: #444488;
+  color: #ccccff;
 }

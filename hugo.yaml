@@ -33,6 +33,10 @@ params:
   style:
     vars:
       highlightColor: "#8888FF"
+      fontFamilyPrimary: "'Open Sans', Helvetica, Arial, sans-serif"
+      # Secondary font-family set responsible for pre, code, kbd, and samp tags font
+    fontFamilySecondary: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+
   customCSS:
     - /css/custom.css
   sidebar:
