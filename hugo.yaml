@@ -1,17 +1,26 @@
 publishDir: /home/cjd/Sync/Website/adebenham/
 baseURL: https://adebenham.com/
-languageCode: en-AU
+locale: en-AU
 title: Dual Elephants - Chris Debenhams homepage
 theme: mainroad
 timezone: Australia/Sydney
 enableRobotsTXT: true
 site_logo: /images/DE_Logo.png
+minify:
+  disableXML: false
+  disableHTML: false
+  disableJS: false
+  disableCSS: false
+  disableSVG: false
 pagination:
   pagerSize: 8
 taxonomies:
   category: categories
   tag: tags
 params:
+  author:
+    name: Chris Debenham
+    email: chris@adebenham.com
   description: Always keep a spare for redundancy
   defaultTheme: auto
   disableThemeToggle: false
